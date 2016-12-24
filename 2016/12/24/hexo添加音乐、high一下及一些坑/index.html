@@ -1,0 +1,973 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<script type="text/javascript" src="https://ogd99kckh.qnssl.com/high.js"></script>
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="hexo,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://ogddl0byd.qnssl.com/favicon.ico?v=5.0.1">
+
+
+
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo添加音乐、high一下及一些坑">
+<meta property="og:url" content="http://www.tc9011.com/2016/12/24/hexo添加音乐、high一下及一些坑/index.html">
+<meta property="og:site_name" content="tc9011's">
+<meta property="og:image" content="https://ogddl0byd.qnssl.com/201612249192601300540696318139084539456506.jpg">
+<meta property="og:image" content="https://ogddl0byd.qnssl.com/20161224814592016-12-24_22-09-16.png">
+<meta property="og:image" content="https://ogddl0byd.qnssl.com/20161225474102016-12-25_01-27-14.gif">
+<meta property="og:image" content="https://ogddl0byd.qnssl.com/20161224756992016-12-24_22-25-36.png">
+<meta property="og:updated_time" content="2016-12-24T17:28:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo添加音乐、high一下及一些坑">
+<meta name="twitter:image" content="https://ogddl0byd.qnssl.com/201612249192601300540696318139084539456506.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'tc9011',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+
+
+
+
+  <title> hexo添加音乐、high一下及一些坑 | tc9011's </title>
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=59390422";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">tc9011's</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle">Notes</p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.tc9011.com/2016/12/24/hexo添加音乐、high一下及一些坑/">
+
+  <span style="display:none" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="汤诚">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://ogddl0byd.qnssl.com/20161109360612.JPG">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="tc9011's">
+    <span style="display:none" itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">
+      <img style="display:none" itemprop="url image" alt="tc9011's" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                hexo添加音乐、high一下及一些坑
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-24T22:07:27+08:00">
+                2016-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术类/" itemprop="url" rel="index">
+                    <span itemprop="name">技术类</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/12/24/hexo添加音乐、high一下及一些坑/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/24/hexo添加音乐、high一下及一些坑/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="/assets/js/APlayer.min.js"> </script><p><img src="https://ogddl0byd.qnssl.com/201612249192601300540696318139084539456506.jpg" alt="201612249192601300540696318139084539456506.jpg"></p>
+<a id="more"></a>
+<h2 id="hexo添加音乐需要几个步骤？"><a href="#hexo添加音乐需要几个步骤？" class="headerlink" title="hexo添加音乐需要几个步骤？"></a>hexo添加音乐需要几个步骤？</h2><p>添加音乐当然可以用其他网站的外链，但是一般外链是<code>&lt;iframe&gt;</code>，这个影响网站的SEO，逼格也不够高。</p>
+<p>下面我就隆重介绍一款html5音乐播放器：<strong><a href="https://github.com/DIYgod/APlayer" rel="external nofollow noopener noreferrer" target="_blank">Aplayer</a></strong>。把Aplayer加入hexo需要用到<a href="https://github.com/grzhan/hexo-tag-aplayer#upstream-issue" rel="external nofollow noopener noreferrer" target="_blank">hexo-tag-aplayer</a>插件。</p>
+<p>切换到hexo目录，运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-tag-aplayer@2.0.1</div></pre></td></tr></table></figure>
+<p>这里直接运行<code>npm install hexo-tag-aplayer</code>只会安装2.0.0，这个版本会出现以下错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">FATAL Cannot find module &apos;/Users/hechao/Documents/TechBlog/CniceToUpp/node_modules/hexo-tag-aplayer&apos;</div><div class="line">Error: Cannot find module &apos;/Users/hechao/Documents/TechBlog/CniceToUpp/node_modules/hexo-tag-aplayer&apos;</div></pre></td></tr></table></figure>
+<p>作者给出来解决方案是用2.0.1版本，<a href="https://github.com/grzhan/hexo-tag-aplayer/issues/11" rel="external nofollow noopener noreferrer" target="_blank">FATAL Cannot find module解决办法</a>。</p>
+<p>安装完成后，在需要添加音乐的地方加上：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% aplayer "平凡之路" "朴树" "https://ogd99kckh.qnssl.com/%E5%B9%B3%E5%<span class="number">87%</span>A1%E4%B9%<span class="number">8</span>B%E8%B7%AF.mp3<span class="string">" "</span>https://ogd99kckh.qnssl.com/<span class="number">1</span>.jpg<span class="string">" "</span>autoplay<span class="string">" %&#125;</span></div></pre></td></tr></table></figure>
+<p>就会出现你想要的音乐啦，这里我把音乐和专辑封面添加到七牛上，加载速度嗖嗖的。</p>
+<p><img src="https://ogddl0byd.qnssl.com/20161224814592016-12-24_22-09-16.png" alt="20161224814592016-12-24_22-09-16.png"></p>
+<p>当然，Aplayer的作者还有一款html5的视频播放器，叫<a href="https://github.com/DIYgod/DPlayer" rel="external nofollow noopener noreferrer" target="_blank">Dplayer</a>，对应有一款hexo的插件，叫<a href="https://github.com/NextMoe/hexo-tag-dplayer" rel="external nofollow noopener noreferrer" target="_blank">hexo-tag-dplayer</a>，有需求的可以去看看，用法都差不多。</p>
+<h2 id="一起high一下"><a href="#一起high一下" class="headerlink" title="一起high一下"></a>一起high一下</h2><p>这个功能是我在<a href="http://www.jianshu.com/p/748622c7bb20" rel="external nofollow noopener noreferrer" target="_blank">Hexo high一下小功能</a>上看到的，觉得很有意思，于是就引进来，改造了一下。</p>
+<p>首先是重新封装了一个high.js文件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">shake</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> e = <span class="built_in">document</span>.createElement(<span class="string">"link"</span>);</div><div class="line">        e.setAttribute(<span class="string">"type"</span>, <span class="string">"text/css"</span>);</div><div class="line">        e.setAttribute(<span class="string">"rel"</span>, <span class="string">"stylesheet"</span>);</div><div class="line">        e.setAttribute(<span class="string">"href"</span>, f);</div><div class="line">        e.setAttribute(<span class="string">"class"</span>, l);</div><div class="line">        <span class="built_in">document</span>.body.appendChild(e)</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">h</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> e = <span class="built_in">document</span>.getElementsByClassName(l);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> t = <span class="number">0</span>; t &lt; e.length; t++) &#123;</div><div class="line">            <span class="built_in">document</span>.body.removeChild(e[t])</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">p</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> e = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</div><div class="line">        e.setAttribute(<span class="string">"class"</span>, a);</div><div class="line">        <span class="built_in">document</span>.body.appendChild(e);</div><div class="line">        setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="built_in">document</span>.body.removeChild(e)</div><div class="line">        &#125;, <span class="number">100</span>)</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">d</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">height</span> : e.offsetHeight,</div><div class="line">            <span class="attr">width</span> : e.offsetWidth</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">v</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> s = d(i);</div><div class="line">        <span class="keyword">return</span> s.height &gt; e &amp;&amp; s.height &lt; n &amp;&amp; s.width &gt; t &amp;&amp; s.width &lt; r</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">m</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> t = e;</div><div class="line">        <span class="keyword">var</span> n = <span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span> (!!t) &#123;</div><div class="line">            n += t.offsetTop;</div><div class="line">            t = t.offsetParent</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> n</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">g</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> e = <span class="built_in">document</span>.documentElement;</div><div class="line">        <span class="keyword">if</span> (!!<span class="built_in">window</span>.innerWidth) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="built_in">window</span>.innerHeight</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (e &amp;&amp; !<span class="built_in">isNaN</span>(e.clientHeight)) &#123;</div><div class="line">            <span class="keyword">return</span> e.clientHeight</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span></div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">y</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (<span class="built_in">window</span>.pageYOffset) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="built_in">window</span>.pageYOffset</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">Math</span>.max(<span class="built_in">document</span>.documentElement.scrollTop, <span class="built_in">document</span>.body.scrollTop)</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">E</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> t = m(e);</div><div class="line">        <span class="keyword">return</span> t &gt;= w &amp;&amp; t &lt;= b + w</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">S</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> e = <span class="built_in">document</span>.createElement(<span class="string">"audio"</span>);</div><div class="line">        e.setAttribute(<span class="string">"class"</span>, l);</div><div class="line">        e.src = i;</div><div class="line">        e.loop = <span class="literal">false</span>;</div><div class="line">        e.addEventListener(<span class="string">"canplay"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                x(k)</div><div class="line">            &#125;, <span class="number">500</span>);</div><div class="line">            setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                N();</div><div class="line">                p();</div><div class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> e = <span class="number">0</span>; e &lt; O.length; e++) &#123;</div><div class="line">                    T(O[e])</div><div class="line">                &#125;</div><div class="line">            &#125;, <span class="number">15500</span>)</div><div class="line">        &#125;, <span class="literal">true</span>);</div><div class="line">        e.addEventListener(<span class="string">"ended"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            N();</div><div class="line">            h()</div><div class="line">        &#125;, <span class="literal">true</span>);</div><div class="line">        e.innerHTML = <span class="string">" &lt;p&gt;If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.&lt;/p&gt; &lt;p&gt;"</span>;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(e);</div><div class="line">        e.play()</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">x</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">        e.className += <span class="string">" "</span> + s + <span class="string">" "</span> + o</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">T</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">        e.className += <span class="string">" "</span> + s + <span class="string">" "</span> + u[<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * u.length)]</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">N</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> e = <span class="built_in">document</span>.getElementsByClassName(s);</div><div class="line">        <span class="keyword">var</span> t = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"\\b"</span> + s + <span class="string">"\\b"</span>);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> n = <span class="number">0</span>; n &lt; e.length; ) &#123;</div><div class="line">            e[n].className = e[n].className.replace(t, <span class="string">""</span>)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="keyword">var</span> e = <span class="number">30</span>;</div><div class="line">    <span class="keyword">var</span> t = <span class="number">30</span>;</div><div class="line">    <span class="keyword">var</span> n = <span class="number">350</span>;</div><div class="line">    <span class="keyword">var</span> r = <span class="number">350</span>;</div><div class="line">    <span class="keyword">var</span> i = <span class="string">"http://o9w8f1xrl.bkt.clouddn.com/highqilai/harlem-shake.mp3"</span>;</div><div class="line">    <span class="keyword">var</span> s = <span class="string">"mw-harlem_shake_me"</span>;</div><div class="line">    <span class="keyword">var</span> o = <span class="string">"im_first"</span>;</div><div class="line">    <span class="keyword">var</span> u = [<span class="string">"im_drunk"</span>, <span class="string">"im_baked"</span>, <span class="string">"im_trippin"</span>, <span class="string">"im_blown"</span>];</div><div class="line">    <span class="keyword">var</span> a = <span class="string">"mw-strobe_light"</span>;</div><div class="line">    <span class="keyword">var</span> f = <span class="string">"http://o9w8f1xrl.bkt.clouddn.com/highqilai/harlem-shake-style.css"</span>;</div><div class="line">    <span class="keyword">var</span> l = <span class="string">"mw_added_css"</span>;</div><div class="line">    <span class="keyword">var</span> b = g();</div><div class="line">    <span class="keyword">var</span> w = y();</div><div class="line">    <span class="keyword">var</span> C = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"*"</span>);</div><div class="line">    <span class="keyword">var</span> k = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> L = <span class="number">0</span>; L &lt; C.length; L++) &#123;</div><div class="line">        <span class="keyword">var</span> A = C[L];</div><div class="line">        <span class="keyword">if</span> (v(A)) &#123;</div><div class="line">            <span class="keyword">if</span> (E(A)) &#123;</div><div class="line">                k = A;</div><div class="line">                <span class="keyword">break</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (A === <span class="literal">null</span>) &#123;</div><div class="line">        <span class="built_in">console</span>.warn(<span class="string">"Could not find a node of the right size. Please try a different page."</span>);</div><div class="line">        <span class="keyword">return</span></div><div class="line">    &#125;</div><div class="line">    c();</div><div class="line">    S();</div><div class="line">    <span class="keyword">var</span> O = [];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> L = <span class="number">0</span>; L &lt; C.length; L++) &#123;</div><div class="line">        <span class="keyword">var</span> A = C[L];</div><div class="line">        <span class="keyword">if</span> (v(A)) &#123;</div><div class="line">            O.push(A)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>把这个文件保存在七牛上，在themes—&gt;next—&gt;layout—&gt;_partials—&gt;head.swig中加入这样一段代码，引入high.js文件：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"https://ogd99kckh.qnssl.com/high.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>然后在themes—&gt;next—&gt;layout—&gt;_macro—&gt;sidebar.swig中加入注释包围中的代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"links-of-author motion-element"</span>&gt;</span></div><div class="line">          &#123;% if theme.social %&#125;</div><div class="line">            &#123;% for name, link in theme.social %&#125;</div><div class="line">              <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"links-of-author-item"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;&#123; link &#125;&#125;"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"&#123;&#123; name &#125;&#125;"</span>&gt;</span></div><div class="line">                  &#123;% if theme.social_icons.enable %&#125;</div><div class="line">                    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-fw fa-&#123;&#123; theme.social_icons[name] | default('globe') | lower &#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line">                  &#123;% endif %&#125;</div><div class="line">                  &#123;&#123; name &#125;&#125;</div><div class="line">                <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">              <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">            &#123;% endfor %&#125;</div><div class="line">  <span class="comment">&lt;!--以下是加入关于high一下的代码--&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"links-of-author-item"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">title</span>=<span class="string">"小high一下~"</span> <span class="attr">style</span>=<span class="string">"underline: none;color:red"</span> <span class="attr">rel</span>=<span class="string">"alternate"</span> <span class="attr">class</span>=<span class="string">"mw-harlem_shake_slow wobble shake"</span> <span class="attr">href</span>=<span class="string">"javascript:shake()"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-music"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> &amp;nbsp;&amp;nbsp;High<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--以上是加入关于high一下的代码--&gt;</span></div><div class="line">          &#123;% endif %&#125;</div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>style中我用了红色，这样显眼一点，不喜欢的话可以改掉。</p>
+<p>接下来点击high这个按钮，会出现一下效果：</p>
+<p><img src="https://ogddl0byd.qnssl.com/20161225474102016-12-25_01-27-14.gif" alt="20161225474102016-12-25_01-27-14.gif"></p>
+<h2 id="大坑"><a href="#大坑" class="headerlink" title="大坑"></a>大坑</h2><p>当我吭哧吭哧的弄完后，突然发现我运行<code>hexo g</code>命令后，出现下面两行提示后就不动了~</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">INFO  Start processing</div><div class="line">INFO  Files loaded in 3.9 s</div></pre></td></tr></table></figure>
+<p>我用了各种方法，包括版本回退，好像都没用。于是我就尝试切换到hexo默认主题，结果又可以<code>hexo g</code>，估计是next主题出问题了，于是我重新下了next主题，把我的配置都重新弄了一遍，结果好了~~，不过页脚的地方与之前博客不同，少了”power by hexo”这几个字眼。</p>
+<p>更新next后遇到的第一个问题是，不显示文章发表时间了，github上的解答是这样的,<a href="https://github.com/iissnan/hexo-theme-next/issues/1300" rel="external nofollow noopener noreferrer" target="_blank">文章标题下的发表时间不见了</a>,在主题配置文件里面加上下面的配置，然后就出来了。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Post meta display settings</span></div><div class="line"><span class="attr">post_meta:</span></div><div class="line"><span class="attr">  created_at:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  updated_at:</span> <span class="literal">false</span></div><div class="line"><span class="attr">  categories:</span> <span class="literal">true</span></div></pre></td></tr></table></figure>
+<p>第二个问题，我<code>hexo s</code>成功后，登陆localhost:4000，发现出现下面的提示：</p>
+<p><img src="https://ogddl0byd.qnssl.com/20161224756992016-12-24_22-25-36.png" alt="20161224756992016-12-24_22-25-36.png"></p>
+<p>原因是，我开了shadowsocks的全局模式，切换到自动代理模式，就可以显示网页了。</p>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/21/Angular2官方文档学习笔记（一）/" rel="next" title="Angular2官方文档学习笔记（一）">
+                <i class="fa fa-chevron-left"></i> Angular2官方文档学习笔记（一）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/12/24/hexo添加音乐、high一下及一些坑/" data-title="hexo添加音乐、high一下及一些坑" data-url="http://www.tc9011.com/2016/12/24/hexo添加音乐、high一下及一些坑/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://ogddl0byd.qnssl.com/20161109360612.JPG" alt="汤诚">
+          <p class="site-author-name" itemprop="name">汤诚</p>
+          <p class="site-description motion-element" itemprop="description">释放精神的桎梏</p>
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/tc9011" target="_blank" title="GitHub" rel="external nofollow noopener noreferrer">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/tc9011" target="_blank" title="知乎" rel="external nofollow noopener noreferrer">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/27056866/" target="_blank" title="豆瓣" rel="external nofollow noopener noreferrer">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+            <span class="links-of-author-item"><a title="小high一下~" style="underline: none;color:red" rel="alternate" class="mw-harlem_shake_slow wobble shake" href="javascript:shake()"><i class="fa fa-music"></i> &nbsp;&nbsp;High</a></span>
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo添加音乐需要几个步骤？"><span class="nav-number">1.</span> <span class="nav-text">hexo添加音乐需要几个步骤？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一起high一下"><span class="nav-number">2.</span> <span class="nav-text">一起high一下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大坑"><span class="nav-number">3.</span> <span class="nav-text">大坑</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    ♥<i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">汤诚</span>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+  var time=setInterval(function () {
+    var now=new Date();
+    var start=new Date('2015/03/03 00:00:00');
+    var t=now.getTime()-start.getTime();
+    var d,h,m,s;
+    d=Math.floor(t/1000/60/60/24);
+    h=Math.floor(t/1000/60/60%24);
+    m=Math.floor(t/1000/60%60);
+    s=Math.floor(t/1000%60);
+    mo=now.getMonth()-start.getMonth();
+    n=now.getFullYear()-start.getFullYear();
+    document.getElementById('day').innerHTML = d;
+    document.getElementById("h").innerHTML = h;
+    document.getElementById("m").innerHTML = m;
+    document.getElementById("s").innerHTML = s;
+},10);
+
+    var duoshuoQuery = {short_name:"tc9011"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.0.1"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>

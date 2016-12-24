@@ -1,0 +1,1006 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<script type="text/javascript" src="https://ogd99kckh.qnssl.com/high.js"></script>
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="json,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://ogddl0byd.qnssl.com/favicon.ico?v=5.0.1">
+
+
+
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSON那些事">
+<meta property="og:url" content="http://www.tc9011.com/2016/12/18/JSON那些事/index.html">
+<meta property="og:site_name" content="tc9011's">
+<meta property="og:image" content="https://ogddl0byd.qnssl.com/2016121852516json-logo1-400x321.png">
+<meta property="og:updated_time" content="2016-12-23T15:19:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JSON那些事">
+<meta name="twitter:image" content="https://ogddl0byd.qnssl.com/2016121852516json-logo1-400x321.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'tc9011',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+
+
+
+
+  <title> JSON那些事 | tc9011's </title>
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=59390422";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">tc9011's</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle">Notes</p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.tc9011.com/2016/12/18/JSON那些事/">
+
+  <span style="display:none" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="汤诚">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://ogddl0byd.qnssl.com/20161109360612.JPG">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="tc9011's">
+    <span style="display:none" itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">
+      <img style="display:none" itemprop="url image" alt="tc9011's" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JSON那些事
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-18T14:24:53+08:00">
+                2016-12-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术类/" itemprop="url" rel="index">
+                    <span itemprop="name">技术类</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/12/18/JSON那些事/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/18/JSON那些事/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="/assets/js/APlayer.min.js"> </script><p><img src="https://ogddl0byd.qnssl.com/2016121852516json-logo1-400x321.png" alt="2016121852516json-logo1-400x321.png"></p>
+<a id="more"></a>
+<p>最近用echarts时和json打交道比较多，在此记录一下关于json的一些事情。</p>
+<h2 id="什么是JSON"><a href="#什么是JSON" class="headerlink" title="什么是JSON"></a>什么是JSON</h2><p>w3school上给出的描述是：</p>
+<blockquote>
+<ul>
+<li>JSON 指的是 JavaScript 对象表示法（<em>J</em>ava<em>S</em>cript <em>O</em>bject <em>N</em>otation）</li>
+<li>JSON 是轻量级的文本数据交换格式</li>
+<li>JSON 独立于语言 *</li>
+<li>JSON 具有自我描述性，更易理解</li>
+</ul>
+<p>* JSON 使用 JavaScript 语法来描述数据对象，但是 JSON 仍然独立于语言和平台。JSON 解析器和 JSON 库支持许多不同的编程语言。</p>
+</blockquote>
+<p>JSON数据书写格式是：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">name : value</div></pre></td></tr></table></figure>
+<p>其中value的值可以是</p>
+<ul>
+<li>数字（整数或浮点数）</li>
+<li>字符串（在双引号中）</li>
+<li>逻辑值（true 或 false）</li>
+<li>数组（在方括号中）</li>
+<li>对象（在花括号中）</li>
+<li>null</li>
+</ul>
+<h2 id="JSON对象与JSON数组"><a href="#JSON对象与JSON数组" class="headerlink" title="JSON对象与JSON数组"></a>JSON对象与JSON数组</h2><h3 id="JSON对象"><a href="#JSON对象" class="headerlink" title="JSON对象"></a>JSON对象</h3><p>JSON对象在<code>{}</code>中书写，对象可以包含多个键值对；</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attr">"firstName"</span>:<span class="string">"John"</span> , <span class="attr">"lastName"</span>:<span class="string">"Doe"</span>&#125;</div></pre></td></tr></table></figure>
+<p>一般JSON对象中有多个键值对时，用<code>,</code>隔开，最后一个键值对结束时可以不写<code>,</code>。</p>
+<h3 id="JSON数组"><a href="#JSON数组" class="headerlink" title="JSON数组"></a>JSON数组</h3><p>JSON数组在<code>[]</code>中书写，数组可以包含多个对象。</p>
+<p>举个栗子：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"employees"</span>: [</div><div class="line">      &#123; <span class="attr">"firstName"</span>:<span class="string">"John"</span> , <span class="attr">"lastName"</span>:<span class="string">"Doe"</span> &#125;,</div><div class="line">      &#123; <span class="attr">"firstName"</span>:<span class="string">"Anna"</span> , <span class="attr">"lastName"</span>:<span class="string">"Smith"</span> &#125;,</div><div class="line">      &#123; <span class="attr">"firstName"</span>:<span class="string">"Peter"</span> , <span class="attr">"lastName"</span>:<span class="string">"Jones"</span> &#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>&quot;employees&quot;</code>这个json对象包含了三个json对象的数组。</p>
+<h2 id="JSON的操作"><a href="#JSON的操作" class="headerlink" title="JSON的操作"></a>JSON的操作</h2><h3 id="获取value"><a href="#获取value" class="headerlink" title="获取value"></a>获取value</h3><p>举个例子:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> employees = [</div><div class="line">&#123; <span class="string">"firstName"</span>:<span class="string">"Bill"</span> , <span class="string">"lastName"</span>:<span class="string">"Gates"</span> &#125;,</div><div class="line">&#123; <span class="string">"firstName"</span>:<span class="string">"George"</span> , <span class="string">"lastName"</span>:<span class="string">"Bush"</span> &#125;,</div><div class="line">&#123; <span class="string">"firstName"</span>:<span class="string">"Thomas"</span> , <span class="string">"lastName"</span>: <span class="string">"Carter"</span> &#125;</div><div class="line">];</div></pre></td></tr></table></figure>
+<p>如果要得到Bill的firstName，可以这样写：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">employees[<span class="number">0</span>].firstName;</div></pre></td></tr></table></figure>
+<p>因为<code>employees</code>是数组，首先通过<code>employees[0]</code>来获取第一个对象，然后用<code>.</code>加要访问的字段名称，就可以获取该字段对应的值。</p>
+<h3 id="添加和删除"><a href="#添加和删除" class="headerlink" title="添加和删除"></a>添加和删除</h3><h4 id="JSON对象-1"><a href="#JSON对象-1" class="headerlink" title="JSON对象"></a>JSON对象</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> json = &#123;&#125;;                      <span class="comment">//空json对像  </span></div><div class="line">json[<span class="string">'firstname'</span>] = <span class="string">"cheng"</span>;       <span class="comment">//添加二个元素  </span></div><div class="line">json[<span class="string">'lastname'</span>] = <span class="string">"tang"</span>;  </div><div class="line"><span class="built_in">console</span>.log(json);              </div><div class="line"></div><div class="line"><span class="keyword">delete</span> json[<span class="string">'lastname'</span>];        <span class="comment">//删除json中的某个元素  </span></div><div class="line"><span class="built_in">console</span>.log(json);</div></pre></td></tr></table></figure>
+<h4 id="JSON数组-1"><a href="#JSON数组-1" class="headerlink" title="JSON数组"></a>JSON数组</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> json1 = [&#123;<span class="string">"name"</span>:<span class="string">"tang"</span>,<span class="string">"total"</span>:<span class="string">"1"</span>&#125;,&#123;<span class="string">"name"</span>:<span class="string">"zhou"</span>,<span class="string">"total"</span>:<span class="string">"2"</span>&#125;,&#123;<span class="string">"name"</span>:<span class="string">"he"</span>,<span class="string">"total"</span>:<span class="string">"3"</span>&#125;]; </div><div class="line"></div><div class="line"><span class="keyword">var</span>  add = &#123;<span class="string">"name"</span>:<span class="string">"may"</span>&#125;;  </div><div class="line">  </div><div class="line">json1.push(add);              <span class="comment">//添加一个元素  </span></div><div class="line"><span class="built_in">console</span>.log(json1);    </div><div class="line">  </div><div class="line"><span class="keyword">delete</span> json1[<span class="number">2</span>];              <span class="comment">//删除一个元素  </span></div><div class="line"><span class="built_in">console</span>.log(json1);</div></pre></td></tr></table></figure>
+<h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><h4 id="JSON对象-2"><a href="#JSON对象-2" class="headerlink" title="JSON对象"></a>JSON对象</h4><p>假设有一个JSON对象：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data=&#123;<span class="string">'a'</span>:<span class="number">10</span>,<span class="string">'b'</span>:<span class="number">20</span>,<span class="string">'c'</span>:<span class="number">30</span>,<span class="string">'d'</span>:<span class="number">40</span>&#125;;</div></pre></td></tr></table></figure>
+<p>怎么遍历这个对象呢，可以用for-in:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> n <span class="keyword">in</span> data)&#123;</div><div class="line">  <span class="built_in">console</span>.log(n); </div><div class="line">  <span class="comment">//输出 a，b，c，d</span></div><div class="line">  </div><div class="line">  <span class="built_in">console</span>.log(data[n]); </div><div class="line">  <span class="comment">//输出 10，20，30，40</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在JavaScript中<code>[]</code>等同于<code>.</code> ，所以 <code>data[n]</code>可以理解为<code>data.n</code>，只不过<code>n</code>是变量，用<code>.</code>获取不到对应的值。</p>
+<h4 id="JSON数组-2"><a href="#JSON数组-2" class="headerlink" title="JSON数组"></a>JSON数组</h4><p>假设有一个JSON数组：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data=[&#123;<span class="attr">name</span>:<span class="string">"a"</span>,<span class="attr">age</span>:<span class="number">1</span>&#125;,&#123;<span class="attr">name</span>:<span class="string">"b"</span>,<span class="attr">age</span>:<span class="number">2</span>&#125;,&#123;<span class="attr">name</span>:<span class="string">"c"</span>,<span class="attr">age</span>:<span class="number">3</span>&#125;,&#123;<span class="attr">name</span>:<span class="string">"d"</span>,<span class="attr">age</span>:<span class="number">4</span>&#125;];</div></pre></td></tr></table></figure>
+<p>遍历这个数组：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> n <span class="keyword">in</span> data)&#123;  </div><div class="line">  <span class="built_in">console</span>.log(n);  				</div><div class="line">  <span class="comment">//输出：0，1，2，3</span></div><div class="line">  </div><div class="line">  <span class="built_in">console</span>.log(data[n]);  			</div><div class="line">  <span class="comment">//输出：&#123;name:"a",age:1&#125;,&#123;name:"b",age:2&#125;,&#123;name:"c",age:3&#125;,&#123;name:"d",age:4&#125;			</span></div><div class="line">  </div><div class="line">  <span class="built_in">console</span>.log(<span class="string">"text:"</span>+data[n].name+<span class="string">" value:"</span>+data[n].age );  </div><div class="line">  <span class="comment">//输出：text:a value:1，text:b value:2，text:c value:3，text:d value:4</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>或者：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> n = <span class="number">0</span>;n &lt; data.length; n++)&#123;</div><div class="line">  <span class="built_in">console</span>.log(data[n]);  			</div><div class="line">  <span class="comment">//输出：&#123;name:"a",age:1&#125;,&#123;name:"b",age:2&#125;,&#123;name:"c",age:3&#125;,&#123;name:"d",age:4&#125;			</span></div><div class="line">  </div><div class="line">  <span class="built_in">console</span>.log(<span class="string">"text:"</span>+data[n].name+<span class="string">" value:"</span>+data[n].age );  </div><div class="line">  <span class="comment">//输出：text:a value:1，text:b value:2，text:c value:3，text:d value:4</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="eval-与JSON-parse"><a href="#eval-与JSON-parse" class="headerlink" title="eval()与JSON.parse()"></a>eval()与JSON.parse()</h2><p>eval()可以将字符串转换为 JavaScript 对象：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> key = <span class="string">'tangcheng'</span>;</div><div class="line"><span class="keyword">var</span> test = <span class="string">'&#123;"'</span>+ key +<span class="string">'": ""&#125;'</span>;		<span class="comment">//定义了一个叫test的字符串</span></div><div class="line"><span class="keyword">var</span> json = <span class="built_in">eval</span>(<span class="string">'('</span>+test+<span class="string">')'</span>);		<span class="comment">//用eval()函数解析test</span></div><div class="line"><span class="built_in">console</span>.log(json)</div><div class="line"><span class="comment">//输出： Object &#123;tangcheng: ""&#125;</span></div></pre></td></tr></table></figure>
+<p>通过这个方法我们就可以动态设置key的值。但是使用这个方法会存在潜在的安全问题，所以可以用JSON.parse()，这个方法需要较高版本的浏览器支持。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> key = <span class="string">'tangcheng'</span>;</div><div class="line"><span class="keyword">var</span> test = <span class="string">'&#123;"'</span>+ key +<span class="string">'": ""&#125;'</span>;		<span class="comment">//定义了一个叫test的字符串</span></div><div class="line"><span class="keyword">var</span> json = <span class="built_in">JSON</span>.parse(test);		<span class="comment">//用eval()函数解析test</span></div><div class="line"><span class="built_in">console</span>.log(json)</div><div class="line"><span class="comment">//输出： Object &#123;tangcheng: ""&#125;</span></div></pre></td></tr></table></figure>
+<p>接下来就可以通过<code>json[key] = value</code>来设置key对应的value值。</p>
+<h2 id="Object-keys"><a href="#Object-keys" class="headerlink" title="Object.keys()"></a>Object.keys()</h2><blockquote>
+<p>Object.keys() 方法会返回一个由给定对象的所有可枚举自身属性的属性名组成的数组，数组中属性名的排列顺序和使用for-in循环遍历该对象时返回的顺序一致（两者的主要区别是 for-in 还会遍历出一个对象从其原型链上继承到的可枚举属性）。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bookAuthors = &#123;</div><div class="line">    <span class="string">"Farmer Giles of Ham"</span>: <span class="string">"J.R.R. Tolkien"</span>,</div><div class="line">    <span class="string">"Out of the Silent Planet"</span>: <span class="string">"C.S. Lewis"</span>,</div><div class="line">    <span class="string">"The Place of the Lion"</span>: <span class="string">"Charles Williams"</span>,</div><div class="line">    <span class="string">"Poetic Diction"</span>: <span class="string">"Owen Barfield"</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> arr = <span class="built_in">Object</span>.keys(bookAuthors);</div><div class="line"><span class="built_in">console</span>.log(arr);</div><div class="line"><span class="comment">//输出: Array [ "Farmer Giles of Ham", "Out of the Silent Planet", "The Place of the Lion", "Poetic Diction" ]</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(arr.length);</div><div class="line"><span class="comment">//输出: 4</span></div></pre></td></tr></table></figure>
+<p>用这个方法可以把json对象转换成数组，这样可以方便的对这个数组进行一些操作。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> test = &#123;</div><div class="line">  <span class="string">"name "</span>: <span class="string">"tangcheng"</span>,</div><div class="line">  <span class="string">"value"</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> arr = <span class="built_in">Object</span>.keys(test);</div><div class="line"><span class="built_in">console</span>.log(arr.length); 	<span class="comment">//输出： 2</span></div><div class="line"><span class="built_in">console</span>.log(test.length)	<span class="comment">//输出：undefined</span></div></pre></td></tr></table></figure>
+<p>Object.keys()方法，只能使用在高版本浏览器，IE8及以下是不支持的，如果想支持IE低版本，可以参考<a href="http://www.zuojj.com/archives/707.html" rel="external nofollow noopener noreferrer" target="_blank">Javascript 计算Object的长度</a>中提供的方法。</p>
+<p>参考文章：</p>
+<p><a href="http://blog.csdn.net/zpf336/article/details/9418525" rel="external nofollow noopener noreferrer" target="_blank">JSON中让key作为参数传入的方法</a>；</p>
+<p><a href="http://www.zuojj.com/archives/707.html" rel="external nofollow noopener noreferrer" target="_blank">Javascript 计算Object的长度</a></p>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/json/" rel="tag"># json</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/15/廖雪峰Git教程学习笔记/" rel="next" title="廖雪峰Git教程学习笔记">
+                <i class="fa fa-chevron-left"></i> 廖雪峰Git教程学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/21/Angular2官方文档学习笔记（一）/" rel="prev" title="Angular2官方文档学习笔记（一）">
+                Angular2官方文档学习笔记（一） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/12/18/JSON那些事/" data-title="JSON那些事" data-url="http://www.tc9011.com/2016/12/18/JSON那些事/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://ogddl0byd.qnssl.com/20161109360612.JPG" alt="汤诚">
+          <p class="site-author-name" itemprop="name">汤诚</p>
+          <p class="site-description motion-element" itemprop="description">释放精神的桎梏</p>
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/tc9011" target="_blank" title="GitHub" rel="external nofollow noopener noreferrer">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/tc9011" target="_blank" title="知乎" rel="external nofollow noopener noreferrer">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/27056866/" target="_blank" title="豆瓣" rel="external nofollow noopener noreferrer">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+            <span class="links-of-author-item"><a title="小high一下~" style="underline: none;color:red" rel="alternate" class="mw-harlem_shake_slow wobble shake" href="javascript:shake()"><i class="fa fa-music"></i> &nbsp;&nbsp;High</a></span>
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是JSON"><span class="nav-number">1.</span> <span class="nav-text">什么是JSON</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON对象与JSON数组"><span class="nav-number">2.</span> <span class="nav-text">JSON对象与JSON数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON对象"><span class="nav-number">2.1.</span> <span class="nav-text">JSON对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON数组"><span class="nav-number">2.2.</span> <span class="nav-text">JSON数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON的操作"><span class="nav-number">3.</span> <span class="nav-text">JSON的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取value"><span class="nav-number">3.1.</span> <span class="nav-text">获取value</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加和删除"><span class="nav-number">3.2.</span> <span class="nav-text">添加和删除</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JSON对象-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">JSON对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JSON数组-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">JSON数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遍历"><span class="nav-number">3.3.</span> <span class="nav-text">遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JSON对象-2"><span class="nav-number">3.3.1.</span> <span class="nav-text">JSON对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JSON数组-2"><span class="nav-number">3.3.2.</span> <span class="nav-text">JSON数组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eval-与JSON-parse"><span class="nav-number">4.</span> <span class="nav-text">eval()与JSON.parse()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-keys"><span class="nav-number">5.</span> <span class="nav-text">Object.keys()</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    ♥<i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">汤诚</span>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+  var time=setInterval(function () {
+    var now=new Date();
+    var start=new Date('2015/03/03 00:00:00');
+    var t=now.getTime()-start.getTime();
+    var d,h,m,s;
+    d=Math.floor(t/1000/60/60/24);
+    h=Math.floor(t/1000/60/60%24);
+    m=Math.floor(t/1000/60%60);
+    s=Math.floor(t/1000%60);
+    mo=now.getMonth()-start.getMonth();
+    n=now.getFullYear()-start.getFullYear();
+    document.getElementById('day').innerHTML = d;
+    document.getElementById("h").innerHTML = h;
+    document.getElementById("m").innerHTML = m;
+    document.getElementById("s").innerHTML = s;
+},10);
+
+    var duoshuoQuery = {short_name:"tc9011"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.0.1"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>
