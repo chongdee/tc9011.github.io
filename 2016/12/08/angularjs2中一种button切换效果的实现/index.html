@@ -10,7 +10,7 @@
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<script type="text/javascript" src="https://ogd99kckh.qnssl.com/high-animation.js"></script>
+<script type="text/javascript" src="http://og9ocpmwk.bkt.clouddn.com/high-animation.js"></script>
 
 <script>
 	(function(){
@@ -106,7 +106,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="https://ogddl0byd.qnssl.com/favicon.ico?v=5.0.1">
+  <link rel="shortcut icon" type="image/x-icon" href="http://og9ocpmwk.bkt.clouddn.com/favicon.ico?v=5.0.1">
 
 
 
@@ -117,13 +117,13 @@
 <meta property="og:title" content="angularjs2中一种button切换效果的实现">
 <meta property="og:url" content="http://www.tc9011.com/2016/12/08/angularjs2中一种button切换效果的实现/index.html">
 <meta property="og:site_name" content="tc9011's">
-<meta property="og:image" content="https://ogddl0byd.qnssl.com/201612084134528591.jpg">
-<meta property="og:image" content="https://ogddl0byd.qnssl.com/20161208707272016-12-08_23-05-30.gif">
-<meta property="og:image" content="https://ogddl0byd.qnssl.com/20161208367222016-12-08_23-14-49.gif">
-<meta property="og:updated_time" content="2016-12-31T08:41:24.000Z">
+<meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/201612084134528591.jpg">
+<meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20161208707272016-12-08_23-05-30.gif">
+<meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20161208367222016-12-08_23-14-49.gif">
+<meta property="og:updated_time" content="2017-01-07T14:05:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angularjs2中一种button切换效果的实现">
-<meta name="twitter:image" content="https://ogddl0byd.qnssl.com/201612084134528591.jpg">
+<meta name="twitter:image" content="http://ofx4ie5iq.bkt.clouddn.com/201612084134528591.jpg">
 
 
 
@@ -419,7 +419,7 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><p><img src="https://ogddl0byd.qnssl.com/201612084134528591.jpg" alt="201612084134528591.jpg"></p>
+        <script src="/assets/js/APlayer.min.js"> </script><p><img src="http://ofx4ie5iq.bkt.clouddn.com/201612084134528591.jpg" alt="201612084134528591.jpg"></p>
 <a id="more"></a>
 <p>最近在AngularJS2中要实现一个按钮切换的效果，我采用三目表达式和ng-class的方式来实现了这一效果，比较简单粗暴。</p>
 <p>首先，我的项目的XX.Component.ts中的template有个button标签：</p>
@@ -430,11 +430,11 @@
 <p>为了实现这个效果，我引入了begin和blue两个变量，分别控制起始状态和点击时的状态。当blue为true且begin===1时按钮变蓝色；当blue为false时或者begin！= 1时按钮变灰色。代码如下：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> [<span class="attr">class</span>]=<span class="string">"begin === 1 &amp;&amp; blue?'active':'btn-lt'"</span> <span class="attr">type</span>=<span class="string">"submit"</span>  (<span class="attr">click</span>)=<span class="string">"blue=true;begin=1"</span>&gt;</span>列表<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> [<span class="attr">class</span>]=<span class="string">"begin === 1 &amp;&amp; !blue?'active':'btn-lt'"</span> <span class="attr">type</span>=<span class="string">"submit"</span>  (<span class="attr">click</span>)=<span class="string">"blue=false;begin=1"</span>&gt;</span>折线图<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>完成后的效果如下：</p>
-<p><img src="https://ogddl0byd.qnssl.com/20161208707272016-12-08_23-05-30.gif" alt="20161208707272016-12-08_23-05-30.gif"></p>
+<p><img src="http://ofx4ie5iq.bkt.clouddn.com/20161208707272016-12-08_23-05-30.gif" alt="20161208707272016-12-08_23-05-30.gif"></p>
 <p>这个方法还可以组合出其他不同的效果，比如说点击后当前按钮变灰：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> [<span class="attr">class</span>]=<span class="string">"begin === 1 &amp;&amp; blue?'active':'btn-lt'"</span> <span class="attr">type</span>=<span class="string">"submit"</span>  (<span class="attr">click</span>)=<span class="string">"blue=false;begin=1"</span>&gt;</span>列表<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> [<span class="attr">class</span>]=<span class="string">"begin === 1 &amp;&amp; !blue?'active':'btn-lt'"</span> <span class="attr">type</span>=<span class="string">"submit"</span>  (<span class="attr">click</span>)=<span class="string">"blue=true;begin=1"</span>&gt;</span>折线图<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>完成后的效果如下：</p>
-<p><img src="https://ogddl0byd.qnssl.com/20161208367222016-12-08_23-14-49.gif" alt="20161208367222016-12-08_23-14-49.gif"></p>
+<p><img src="http://ofx4ie5iq.bkt.clouddn.com/20161208367222016-12-08_23-14-49.gif" alt="20161208367222016-12-08_23-14-49.gif"></p>
 <p>比如把begin去掉，可以实现加载完成后有一个按钮处于激活状态，这里我就不做gif了，可以自己尝试一下。</p>
       
     </div>
@@ -629,8 +629,8 @@
       <div class="footer-inner">
         <div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     ♥<i class="fa fa-"></i>
   </span>
