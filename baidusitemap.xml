@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://www.tc9011.com/2017/01/16/WebStorm%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</loc>
-    <lastmod>2017-01-16T17:59:50.000Z</lastmod>
+    <lastmod>2017-01-17T14:43:52.000Z</lastmod>
     <data>
         <display>
         <title>WebStorm那些事儿</title>
@@ -17,6 +17,46 @@
            
              
               <breadCrumb title="技术类" url="http://www.tc9011.com/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.tc9011.com/2017/01/02/Angular2%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88/</loc>
+    <lastmod>2017-01-17T13:32:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>Angular2官方文档学习笔记之架构概览</title>
+        <pubTime>2017-01-02T13:23:54.000Z</pubTime>
+        
+        <tag>AngularJS2</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术类" url="http://www.tc9011.com/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.tc9011.com/2016/11/24/%E3%80%8AAngularJS%E5%AE%9E%E6%88%98%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2017-01-17T13:25:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>《AngularJS实战》学习笔记</title>
+        <pubTime>2016-11-24T14:34:15.000Z</pubTime>
+        
+        <tag>AngularJS1</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://www.tc9011.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
           
         </display>
     </data>
@@ -326,26 +366,6 @@
            
              
               <breadCrumb title="生活杂谈" url="http://www.tc9011.com/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%B0%88/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.tc9011.com/2016/11/24/%E3%80%8AAngularJS%E5%AE%9E%E6%88%98%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2017-01-07T14:01:49.000Z</lastmod>
-    <data>
-        <display>
-        <title>《AngularJS实战》学习笔记</title>
-        <pubTime>2016-11-24T14:34:15.000Z</pubTime>
-        
-        <tag>AngularJS</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习笔记" url="http://www.tc9011.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
           
         </display>
     </data>
