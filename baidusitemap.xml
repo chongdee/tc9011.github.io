@@ -4,34 +4,16 @@
 
     
   <url>
-    <loc>http://www.tc9011.com/2017/01/18/Markdown-%E4%BD%A0%E5%80%BC%E5%BE%97%E6%8B%A5%E6%9C%89/</loc>
-    <lastmod>2017-01-18T14:58:39.000Z</lastmod>
+    <loc>http://www.tc9011.com/2017/01/23/Echarts%E6%94%B9%E9%80%A0%E4%B9%8B%E5%8A%A8%E6%80%81%E6%98%BE%E7%A4%BA/</loc>
+    <lastmod>2017-01-23T16:19:34.000Z</lastmod>
     <data>
         <display>
-        <title>Markdown--你值得拥有</title>
-        <pubTime>2017-01-18T11:55:24.000Z</pubTime>
+        <title>Echarts改造之动态显示</title>
+        <pubTime>2017-01-23T12:48:09.000Z</pubTime>
         
-        <tag>Markdown</tag>
+        <tag>Echarts</tag>
          
-         
-           
-             
-              <breadCrumb title="技术类" url="http://www.tc9011.com/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.tc9011.com/2017/01/16/WebStorm%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</loc>
-    <lastmod>2017-01-18T11:38:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>WebStorm那些事儿</title>
-        <pubTime>2017-01-16T11:55:27.000Z</pubTime>
-        
-        <tag>WebStorm</tag>
+        <tag>AngularJS2</tag>
          
          
            
@@ -45,7 +27,7 @@
     
   <url>
     <loc>http://www.tc9011.com/2017/01/02/Angular2%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88/</loc>
-    <lastmod>2017-01-17T13:32:11.000Z</lastmod>
+    <lastmod>2017-01-20T17:04:13.000Z</lastmod>
     <data>
         <display>
         <title>Angular2官方文档学习笔记之架构概览</title>
@@ -56,7 +38,47 @@
          
            
              
-              <breadCrumb title="技术类" url="http://www.tc9011.com/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"/>
+              <breadCrumb title="学习笔记" url="http://www.tc9011.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.tc9011.com/2017/01/16/WebStorm%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</loc>
+    <lastmod>2017-01-20T17:03:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>WebStorm那些事儿</title>
+        <pubTime>2017-01-16T11:55:27.000Z</pubTime>
+        
+        <tag>WebStorm</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="http://www.tc9011.com/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.tc9011.com/2017/01/18/Markdown-%E4%BD%A0%E5%80%BC%E5%BE%97%E6%8B%A5%E6%9C%89/</loc>
+    <lastmod>2017-01-20T17:03:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown--你值得拥有</title>
+        <pubTime>2017-01-18T11:55:24.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="http://www.tc9011.com/categories/%E5%B7%A5%E5%85%B7/"/>
           
         </display>
     </data>
