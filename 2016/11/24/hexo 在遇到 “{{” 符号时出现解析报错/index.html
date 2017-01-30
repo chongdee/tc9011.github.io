@@ -118,7 +118,7 @@
 <meta property="og:url" content="http://www.tc9011.com/2016/11/24/hexo 在遇到 “{{” 符号时出现解析报错/index.html">
 <meta property="og:site_name" content="tc9011's">
 <meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20161124629211440753602428155.png">
-<meta property="og:updated_time" content="2017-01-07T14:06:37.000Z">
+<meta property="og:updated_time" content="2017-01-30T03:15:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo在遇到“{{”符号时出现解析报错">
 <meta name="twitter:image" content="http://ofx4ie5iq.bkt.clouddn.com/20161124629211440753602428155.png">
@@ -426,10 +426,22 @@
 <blockquote>
 <p>查找资料发现有人遇到和我类似的问题，但报的是 `unexpected token: }}的错误。搜索一下我那篇文章，果然有好几处带有 }} 符号。尝试着把几处符号删除，果然正常了。看来问题真的出在 }}上面。</p>
 <p>直接说解决方案吧，参考别人的解决方法是在 }}中间加一个空格，但因为我的是有部分教程含义的文章，所以并不想这样误导人。于是去 github 上找解决方案。</p>
-<p>github 上给出的方法是在需要显示 }}符号的地方加上 <code>` 标签，标记这部分不需要解析。例如文章中可能会出现 `` 的片段，写成 `{{ something }}</code> 就可以了。</p>
+<p>github 上给出的方法是在需要显示 }}符号的地方加上 </p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; &#123;% raw %&#125;&#123;% endraw %&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
+<p> 标签，标记这部分不需要解析。例如文章中可能会出现 <code>{ { something } }</code> 的片段，写成</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; &#123;% raw %&#125;&#123;&#123; something &#125;&#125;&#123;% endraw %&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
+<p>就可以了。</p>
 <p>虽然有点麻烦，但也算临时解决了这个问题，这是个已知 bug ，希望后续的版本能修复吧，毕竟使用太多 hexo 专属的标签对博客以后的迁移、改版什么的来说还是很麻烦的。</p>
 </blockquote>
-<p>但是`` 标签在代码块中会显示出来，前一篇文章的代码块中的}}符号我就用空格隔开了。</p>
+<p>但是</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;&#123;% endraw %&#125;</div></pre></td></tr></table></figure>
+<p> 标签在代码块中会显示出来，前一篇文章的代码块中的}}符号我就用空格隔开了。</p>
       
     </div>
 
