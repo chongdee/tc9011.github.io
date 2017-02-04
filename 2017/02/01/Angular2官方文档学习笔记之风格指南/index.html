@@ -1,0 +1,1111 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<script type="text/javascript" src="http://og9ocpmwk.bkt.clouddn.com/high-animation.js"></script>
+
+<script>
+	(function(){
+		if(''){
+			if (prompt('请输入文章密码','') !== ''){
+				alert('密码错误！');
+				history.back();
+			}
+		}
+	})();
+</script>
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="AngularJS2,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://ofx4ie5iq.bkt.clouddn.com/favicon.ico?v=5.0.1">
+
+
+
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angular2官方文档学习笔记之风格指南">
+<meta property="og:url" content="http://www.tc9011.com/2017/02/01/Angular2官方文档学习笔记之风格指南/index.html">
+<meta property="og:site_name" content="tc9011's">
+<meta property="og:image" content="http://7xqmjb.com1.z0.glb.clouddn.com/2017020411358aj1.jpeg">
+<meta property="og:image" content="http://7xqmjb.com1.z0.glb.clouddn.com/2017020481957FireShot Capture 10 - 风格指南 - ts - GUIDE_ - https___angular.cn_docs_ts_latest_.png">
+<meta property="og:image" content="http://7xqmjb.com1.z0.glb.clouddn.com/201702047903FireShot Capture 11 - 风格指南 - ts - GUIDE_ - https___angular.cn_docs_ts_latest_.png">
+<meta property="og:updated_time" content="2017-02-04T11:53:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Angular2官方文档学习笔记之风格指南">
+<meta name="twitter:image" content="http://7xqmjb.com1.z0.glb.clouddn.com/2017020411358aj1.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'tc9011',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+
+
+
+
+  <title> Angular2官方文档学习笔记之风格指南 | tc9011's </title>
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=59390422";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">tc9011's</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle">Notes</p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.tc9011.com/2017/02/01/Angular2官方文档学习笔记之风格指南/">
+
+  <span style="display:none" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="汤诚">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://ofx4ie5iq.bkt.clouddn.com/20161109360612.JPG">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="tc9011's">
+    <span style="display:none" itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">
+      <img style="display:none" itemprop="url image" alt="tc9011's" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Angular2官方文档学习笔记之风格指南
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-01T18:39:35+08:00">
+                2017-02-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术类/" itemprop="url" rel="index">
+                    <span itemprop="name">技术类</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/01/Angular2官方文档学习笔记之风格指南/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/01/Angular2官方文档学习笔记之风格指南/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="/assets/js/APlayer.min.js"> </script><p><img src="http://7xqmjb.com1.z0.glb.clouddn.com/2017020411358aj1.jpeg" alt="2017020411358aj1.jpeg"></p>
+<a id="more"></a>
+<h2 id="单一职责"><a href="#单一职责" class="headerlink" title="单一职责"></a>单一职责</h2><h3 id="单一法则"><a href="#单一法则" class="headerlink" title="单一法则"></a>单一法则</h3><p><strong>坚持</strong>每个文件只定义一样东西（例如服务或组件）。</p>
+<p><strong>考虑</strong>把文件大小限制在 400 行代码以内。</p>
+<h3 id="简单函数"><a href="#简单函数" class="headerlink" title="简单函数"></a>简单函数</h3><p><strong>坚持</strong>定义简单函数</p>
+<p><strong>考虑</strong>限制在 75 行之内。</p>
+<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><h3 id="总体命名指导原则"><a href="#总体命名指导原则" class="headerlink" title="总体命名指导原则"></a>总体命名指导原则</h3><p><strong>坚持</strong>所有符号使用一致的命名规则。</p>
+<p><strong>坚持</strong>遵循同一个模式来描述符号的特性和类型。推荐的模式为<code>feature.type.ts</code>。</p>
+<h3 id="使用点和横杠分隔文件名"><a href="#使用点和横杠分隔文件名" class="headerlink" title="使用点和横杠分隔文件名"></a>使用点和横杠分隔文件名</h3><p><strong>坚持</strong> 在描述性名字中，用横杠来分隔单词。</p>
+<p><strong>坚持</strong>使用点来分隔描述性名字和类型。</p>
+<p><strong>坚持</strong>遵循先描述组件特性，再描述它的类型的模式，对所有组件使用一致的类型命名规则。推荐的模式为<code>feature.type.ts</code>。</p>
+<p><strong>坚持</strong>使用惯用的后缀来描述类型，包括<code>*.service</code>、<code>*.component</code>、<code>*.pipe</code>、<code>.module</code>、<code>.directive</code>。 必要时可以创建更多类型名，但必须注意，不要创建太多。</p>
+<h3 id="符号名与文件名"><a href="#符号名与文件名" class="headerlink" title="符号名与文件名"></a>符号名与文件名</h3><p><strong>坚持</strong>为所有东西使用一致的命名约定，以它们所代表的东西命名。</p>
+<p><strong>坚持</strong>使用<strong>大写驼峰命名法</strong>来命名类。符号名匹配它所在的文件名。</p>
+<p><strong>坚持</strong>在符号名后面追加约定的类型后缀（例如<code>Component</code>、<code>Directive</code>、<code>Module</code>、<code>Pipe</code>、<code>Service</code>）。</p>
+<p><strong>坚持</strong>在文件名后面追加约定的类型后缀（例如<code>.component.ts</code>、<code>.directive.ts</code>、<code>.module.ts</code>、<code>.pipe.ts</code>、<code>.service.ts</code>）。</p>
+<h3 id="服务名"><a href="#服务名" class="headerlink" title="服务名"></a>服务名</h3><p><strong>坚持</strong>使用一致的规则命名服务，以它们的特性来命名。</p>
+<p><strong>坚持</strong>使用<strong>大写驼峰命名法</strong>命名服务。</p>
+<p><strong>坚持</strong>添加<code>Service</code>后缀，当不清楚它们是什么时（例如当它们是名词时）。</p>
+<h3 id="引导"><a href="#引导" class="headerlink" title="引导"></a>引导</h3><p><strong>坚持</strong>把应用的引导程序和平台相关的逻辑放到名为<code>main.ts</code>的文件里。</p>
+<p><strong>坚持</strong>在引导逻辑中包含错误处理代码。</p>
+<p><strong>避免</strong>把应用逻辑放在<code>main.ts</code>中，而应放在组件或服务里。</p>
+<h3 id="指令选择器"><a href="#指令选择器" class="headerlink" title="指令选择器"></a>指令选择器</h3><p><strong>坚持</strong>使用<strong>小驼峰命名法</strong>来命名指令的选择器。</p>
+<h3 id="为组件添加自定义前缀"><a href="#为组件添加自定义前缀" class="headerlink" title="为组件添加自定义前缀"></a>为组件添加自定义前缀</h3><p><strong>坚持</strong>使用带连字符的小写元素选择器值（例如<code>admin-users</code>）。</p>
+<p><strong>坚持</strong>为组件选择器添加自定义前缀。 例如，<code>toh</code>前缀表示 <strong>T</strong>our <strong>o</strong>f <strong>H</strong>eroes（英雄指南），而前缀`admin表示管理特性区。</p>
+<p><strong>坚持</strong>使用前缀来识别特性区或者应用程序本身。</p>
+<h3 id="为指令添加自定义前缀"><a href="#为指令添加自定义前缀" class="headerlink" title="为指令添加自定义前缀"></a>为指令添加自定义前缀</h3><p><strong>坚持</strong>为指令的选择器添加自定义前缀（例如前缀<code>toh</code>来自<strong>T</strong>our <strong>o</strong>f <strong>H</strong>eroes）。</p>
+<p><strong>坚持</strong>用<strong>小驼峰形式</strong>拼写非元素选择器，除非该选择器用于匹配原生 HTML 属性。</p>
+<h3 id="管道名"><a href="#管道名" class="headerlink" title="管道名"></a>管道名</h3><p><strong>坚持</strong>为所有管道使用一致的命名约定，用它们的特性来命名。</p>
+<h3 id="单元测试文件名"><a href="#单元测试文件名" class="headerlink" title="单元测试文件名"></a>单元测试文件名</h3><p><strong>坚持</strong>测试规格文件名与被测试组件文件名相同。</p>
+<p><strong>坚持</strong>测试规格文件名添加<code>.spec</code>后缀。</p>
+<p><img src="http://7xqmjb.com1.z0.glb.clouddn.com/2017020481957FireShot Capture 10 - 风格指南 - ts - GUIDE_ - https___angular.cn_docs_ts_latest_.png" alt="2017020481957FireShot Capture 10 - 风格指南 - ts - GUIDE_ - https___angular.cn_docs_ts_latest_.png"></p>
+<h3 id="端到端测试文件名"><a href="#端到端测试文件名" class="headerlink" title="端到端测试文件名"></a>端到端测试文件名</h3><p><strong>坚持</strong>端到端测试规格文件和它们所测试的特性同名，添加<code>.e2e-spec</code>后缀。</p>
+<h3 id="Angular-NgModule-命名"><a href="#Angular-NgModule-命名" class="headerlink" title="Angular NgModule 命名"></a>Angular NgModule 命名</h3><p><strong>坚持</strong>为符号名添加<code>Module</code>后缀</p>
+<p><strong>坚持</strong>为文件名添加<code>.module.ts</code>扩展名。</p>
+<p><strong>坚持</strong>用特性名和所在目录命名模块。</p>
+<p><strong>坚持</strong>为 <em>RoutingModule</em> 类名添加<code>RoutingModule</code>后缀。</p>
+<p><strong>坚持</strong>为 <em>RoutingModule</em> 的文件名添加<code>-routing.module.ts</code>后缀。</p>
+<h2 id="代码约定"><a href="#代码约定" class="headerlink" title="代码约定"></a>代码约定</h2><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p><strong>坚持</strong>使用大写驼峰命名法来命名类。</p>
+<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p><strong>坚持</strong>用<code>const</code>声明变量，除非它们的值在应用的生命周期内会发生变化。</p>
+<p><strong>考虑</strong> 把常量名拼写为<strong>小驼峰格式</strong>。</p>
+<p><strong>坚持</strong>容许<em>现存的</em><code>const</code>常量沿用<strong>大写蛇形命名法</strong>。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> mockHeroes   = [<span class="string">'Sam'</span>, <span class="string">'Jill'</span>]; <span class="comment">// prefer</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> heroesUrl    = <span class="string">'api/heroes'</span>;    <span class="comment">// prefer</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> VILLAINS_URL = <span class="string">'api/villains'</span>;  <span class="comment">// tolerate</span></div></pre></td></tr></table></figure>
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p><strong>坚持</strong>使用<strong>大写驼峰命名法</strong>来命名接口。</p>
+<p><strong>考虑</strong>不要在接口名字前面加<code>I</code>前缀。（<a href="https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines" rel="external nofollow noopener noreferrer" target="_blank">TypeScript 指导原则</a>不建议使用 “I” 前缀。）</p>
+<p><strong>考虑</strong>用类代替接口。（单独一个类的代码量小于<em>类+接口</em>；类可以作为接口使用，只是用<code>implements</code>代替<code>extends</code>而已；在 Angular 依赖注入系统中，接口类可以作为服务提供商的查找令牌。）</p>
+<h3 id="属性和方法"><a href="#属性和方法" class="headerlink" title="属性和方法"></a>属性和方法</h3><p><strong>坚持</strong>使用小写驼峰命名法来命名属性和方法。</p>
+<p><strong>避免</strong>为私有属性和方法添加下划线前缀。</p>
+<h3 id="导入语句中的空行"><a href="#导入语句中的空行" class="headerlink" title="导入语句中的空行"></a>导入语句中的空行</h3><p><strong>坚持</strong>在第三方导入和应用导入之间留一个空行。</p>
+<p><strong>考虑</strong>按模块名字的字母顺排列导入行。</p>
+<p><strong>考虑</strong>在解构表达式中按字母顺序排列导入的东西。</p>
+<h2 id="应用结构与Angular模块"><a href="#应用结构与Angular模块" class="headerlink" title="应用结构与Angular模块"></a>应用结构与Angular模块</h2><p>所有应用程序的源代码都放到名叫<code>app</code>的目录里。 所有特性区都在自己的文件夹中，带有它们自己的 Angular 模块。</p>
+<p>所有内容都遵循每个文件一个特性的原则。每个组件、服务和管道都在自己的文件里。 所有第三方程序包保存到其它目录里，不是<code>app</code>目录。 </p>
+<h3 id="LIFT"><a href="#LIFT" class="headerlink" title="LIFT"></a>LIFT</h3><p><strong>坚持</strong>组织应用的结构，达到这些目的：快速定位 (<code>L</code>ocate) 代码、一眼识别 (<code>I</code>dentify) 代码、 尽量保持扁平结构 (<code>F</code>lattest) 和尝试 (<code>T</code>ry) 遵循DRY (Do Not Repeat Yourself, 不重复自己) 原则。</p>
+<p><strong>坚持</strong>四项基本原则定义文件结构，上面的原则是按重要顺序排列的。</p>
+<h3 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h3><p><strong>坚持</strong>直观、简单和快速地定位代码。</p>
+<h3 id="识别"><a href="#识别" class="headerlink" title="识别"></a>识别</h3><p><strong>坚持</strong>命名文件到这个程度：看到名字立刻知道它包含了什么，代表了什么。</p>
+<p><strong>坚持</strong>文件名要具有说明性，确保文件中只包含一个组件。</p>
+<p><strong>避免</strong>创建包含多个组件、服务或者混合体的文件。</p>
+<h3 id="扁平"><a href="#扁平" class="headerlink" title="扁平"></a>扁平</h3><p><strong>坚持</strong>尽可能保持扁平的目录结构。</p>
+<p><strong>考虑</strong>当同一目录下达到 7 个或更多个文件时创建子目录。</p>
+<p><strong>考虑</strong>配置 IDE，以隐藏无关的文件，例如生成出来的<code>.js</code>文件和<code>.js.map</code>文件等。</p>
+<h3 id="T-DRY-（尝试不重复自己）"><a href="#T-DRY-（尝试不重复自己）" class="headerlink" title="T-DRY （尝试不重复自己）"></a>T-DRY （尝试不重复自己）</h3><p><strong>坚持</strong> DRY（Don’t Repeat Yourself，不重复自己）。</p>
+<p><strong>避免</strong>过度 DRY，以致牺牲了阅读性。</p>
+<h3 id="总体结构指导原则"><a href="#总体结构指导原则" class="headerlink" title="总体结构指导原则"></a>总体结构指导原则</h3><p><strong>坚持</strong>从零开始，但要考虑应用程序接下来的路往哪儿走。</p>
+<p><strong>坚持</strong>有一个近期实施方案和一个长期的愿景。</p>
+<p><strong>坚持</strong>把所有源代码都放到名为<code>app</code>的目录里。</p>
+<p><strong>坚持</strong>如果组件具有多个伴隨文件 (<code>.ts</code>、<code>.html</code>、<code>.css</code>和<code>.spec</code>)，就为它创建一个文件夹。</p>
+<p>下面是符合规范的目录和文件结构：</p>
+<p><img src="http://7xqmjb.com1.z0.glb.clouddn.com/201702047903FireShot Capture 11 - 风格指南 - ts - GUIDE_ - https___angular.cn_docs_ts_latest_.png" alt="201702047903FireShot Capture 11 - 风格指南 - ts - GUIDE_ - https___angular.cn_docs_ts_latest_.png"></p>
+<h3 id="按特性组织的目录结构"><a href="#按特性组织的目录结构" class="headerlink" title="按特性组织的目录结构"></a>按特性组织的目录结构</h3><p><strong>坚持</strong>根据特性区命名目录。</p>
+<p><strong>坚持</strong>为每个特性区创建一个 Angular 模块。</p>
+<h3 id="应用的根模块"><a href="#应用的根模块" class="headerlink" title="应用的根模块"></a>应用的根模块</h3><p><strong>坚持</strong>在应用的根目录创建一个 Angular 模块（例如<code>/app</code>）。</p>
+<p><strong>考虑</strong>把根模块命名为<code>app.module.ts</code>。</p>
+<h3 id="特性模块"><a href="#特性模块" class="headerlink" title="特性模块"></a>特性模块</h3><p><strong>坚持</strong>为应用中每个明显的特性创建一个 Angular 模块。</p>
+<p><strong>坚持</strong>把特性模块放在与特性区同名的目录中（例如<code>app/heroes</code>）。</p>
+<p><strong>坚持</strong>特性模块的文件名应该能反映出特性区的名字和目录（例如<code>app/heroes/heroes.module.ts</code>）。</p>
+<p><strong>坚持</strong>特性模块的符号名应该能反映出特性区、目录和文件名（例如在<code>app/heroes/heroes.module.ts</code>中定义<code>HeroesModule</code>）。</p>
+<h3 id="共享特性模块"><a href="#共享特性模块" class="headerlink" title="共享特性模块"></a>共享特性模块</h3><p><strong>坚持</strong>在<code>shared</code>目录中创建名叫<code>SharedModule</code>的特性模块（例如在<code>app/shared/shared.module.ts</code>中定义<code>SharedModule</code>）。</p>
+<p><strong>坚持</strong>把可能被应用其它特性模块使用的公共组件、指令和管道放在<code>SharedModule</code>中，这些资产倾向于共享自己的新实例（而不是单例）。</p>
+<p><strong>坚持</strong>在<code>SharedModule</code>中导入所有模块都需要的资产（例如<code>CommonModule</code>和<code>FormsModule</code>）。</p>
+<p><strong>坚持</strong>在<code>SharedModule</code>中声明所有组件、指令和管道。</p>
+<p><strong>坚持</strong>从<code>SharedModule</code>中导出其它特性模块所需的全部符号。</p>
+<p><strong>避免</strong>在<code>SharedModule</code>中指定应用级的单例服务提供商。但如果是故意设计的单例也可以，不过还是要小心。</p>
+<h3 id="核心特性模块"><a href="#核心特性模块" class="headerlink" title="核心特性模块"></a>核心特性模块</h3><p><strong>坚持</strong>把那些“只用一次”的类收集到<code>CoreModule</code>中，并对外隐藏它们的实现细节。简化的<code>AppModule</code>会导入<code>CoreModule</code>，并且把它作为整个应用的总指挥。</p>
+<p><strong>坚持</strong>在<code>core</code>目录下创建一个名叫<code>CoreModule</code>的特性模块（例如在<code>app/core/core.module.ts</code>中定义<code>CoreModule</code>）。</p>
+<p><strong>坚持</strong>把一个要共享给整个应用的单例服务放进<code>CoreModule</code>中（例如<code>ExceptionService</code>和<code>LoggerService</code>）。</p>
+<p><strong>坚持</strong>导入<code>CoreModule</code>中的资产所需要的全部模块（例如<code>CommonModule</code>和<code>FormsModule</code>）。</p>
+<p><strong>坚持</strong>把应用级、只用一次的组件收集到<code>CoreModule</code>中。 只在应用启动时从<code>AppModule</code>中导入它一次，以后再也不要导入它（例如<code>NavComponent</code>和<code>SpinnerComponent</code>）。</p>
+<p><strong>避免</strong>在<code>AppModule</code>之外的任何地方导入<code>CoreModule</code>。</p>
+<p><strong>坚持</strong>从<code>CoreModule</code>中导出<code>AppModule</code>需导入的所有符号，使它们在所有特性模块中可用。</p>
+<h3 id="防止多次导入CoreModule"><a href="#防止多次导入CoreModule" class="headerlink" title="防止多次导入CoreModule"></a>防止多次导入<code>CoreModule</code></h3><p><strong>坚持</strong>防范多次导入<code>CoreModule</code>，并通过添加守卫逻辑来尽快失败。(守卫可以阻止对<code>CoreModule</code>的多次导入,守卫会禁止创建单例服务的多个实例。)</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">app/core/<span class="keyword">module</span>-import-guard.ts</div><div class="line"></div><div class="line">export function throwIfAlreadyLoaded(parentModule: any, moduleName: string) &#123;</div><div class="line">  <span class="keyword">if</span> (parentModule) &#123;</div><div class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">`<span class="subst">$&#123;moduleName&#125;</span> has already been loaded. Import Core modules in the AppModule only.`</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="惰性加载的目录"><a href="#惰性加载的目录" class="headerlink" title="惰性加载的目录"></a>惰性加载的目录</h3><p><strong>坚持</strong>把惰性加载特性下的内容放进<em>惰性加载目录</em>中。 典型的<em>惰性加载目录</em>包含<em>路由组件</em>及其子组件以及与它们有关的那些资产和模块。</p>
+<h3 id="永远不要直接导入惰性加载的目录"><a href="#永远不要直接导入惰性加载的目录" class="headerlink" title="永远不要直接导入惰性加载的目录"></a>永远不要直接导入惰性加载的目录</h3><p><strong>避免</strong>让兄弟模块和父模块直接导入<em>惰性加载特性</em>中的模块。</p>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h3 id="组件选择器命名"><a href="#组件选择器命名" class="headerlink" title="组件选择器命名"></a>组件选择器命名</h3><p><strong>坚持</strong>使用<em>中线 (dashed) 命名法</em>或<em>烤串 (kebab) 命名法</em>来命名组件中的元素选择器。</p>
+<h3 id="把组件当做元素"><a href="#把组件当做元素" class="headerlink" title="把组件当做元素"></a>把组件当做元素</h3><p><strong>坚持</strong>通过选择器把组件定义为元素。</p>
+<h3 id="把模板和样式提取到它们自己的文件"><a href="#把模板和样式提取到它们自己的文件" class="headerlink" title="把模板和样式提取到它们自己的文件"></a>把模板和样式提取到它们自己的文件</h3><p><strong>坚持</strong>当超过 3 行时，把模板和样式提取到一个单独的文件。</p>
+<p><strong>坚持</strong>把模板文件命名为<code>[component-name].component.html</code>，其中，[component-name] 是组件名。</p>
+<p><strong>坚持</strong>把样式文件命名为<code>[component-name].component.css</code>，其中，[component-name] 是组件名。</p>
+<h3 id="内联输入和输出属性装饰器"><a href="#内联输入和输出属性装饰器" class="headerlink" title="内联输入和输出属性装饰器"></a>内联输入和输出属性装饰器</h3><p><strong>坚持</strong> 使用<code>@Input</code>和<code>@Output</code>，而非<code>@Directive</code>和<code>@Component</code>装饰器的<code>inputs</code>和<code>outputs</code>属性:</p>
+<p><strong>坚持</strong>把<code>@Input()</code>或者<code>@Output()</code>放到所装饰的属性的同一行。</p>
+<h3 id="避免重命名输入和输出"><a href="#避免重命名输入和输出" class="headerlink" title="避免重命名输入和输出"></a>避免重命名输入和输出</h3><p><strong>避免</strong>重命名输入和输出。</p>
+<h3 id="成员顺序"><a href="#成员顺序" class="headerlink" title="成员顺序"></a>成员顺序</h3><p><strong>坚持</strong>把属性成员放在前面，方法成员放在后面。</p>
+<p><strong>坚持</strong>先放公共成员，再放私有成员，并按照字母顺序排列。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> ToastComponent <span class="keyword">implements</span> OnInit &#123;</div><div class="line">  <span class="comment">// public properties</span></div><div class="line">  message: <span class="built_in">string</span>;</div><div class="line">  title: <span class="built_in">string</span>;</div><div class="line">  <span class="comment">// private fields</span></div><div class="line">  <span class="keyword">private</span> defaults = &#123;</div><div class="line">    title: <span class="string">''</span>,</div><div class="line">    message: <span class="string">'May the Force be with You'</span></div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">private</span> toastElement: <span class="built_in">any</span>;</div><div class="line">  <span class="comment">// public methods</span></div><div class="line">  activate(message = <span class="keyword">this</span>.defaults.message, title = <span class="keyword">this</span>.defaults.title) &#123;</div><div class="line">    <span class="keyword">this</span>.title = title;</div><div class="line">    <span class="keyword">this</span>.message = message;</div><div class="line">    <span class="keyword">this</span>.show();</div><div class="line">  &#125;</div><div class="line">  ngOnInit() &#123;</div><div class="line">    <span class="keyword">this</span>.toastElement = <span class="built_in">document</span>.getElementById(<span class="string">'toh-toast'</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="comment">// private methods</span></div><div class="line">  <span class="keyword">private</span> hide() &#123;</div><div class="line">    <span class="keyword">this</span>.toastElement.style.opacity = <span class="number">0</span>;</div><div class="line">    <span class="built_in">window</span>.setTimeout(() =&gt; <span class="keyword">this</span>.toastElement.style.zIndex = <span class="number">0</span>, <span class="number">400</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">private</span> show() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.message);</div><div class="line">    <span class="keyword">this</span>.toastElement.style.opacity = <span class="number">1</span>;</div><div class="line">    <span class="keyword">this</span>.toastElement.style.zIndex = <span class="number">9999</span>;</div><div class="line">    <span class="built_in">window</span>.setTimeout(() =&gt; <span class="keyword">this</span>.hide(), <span class="number">2500</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="把逻辑放到服务里"><a href="#把逻辑放到服务里" class="headerlink" title="把逻辑放到服务里"></a>把逻辑放到服务里</h3><p><strong>坚持</strong>在组件中只包含与视图相关的逻辑。所有其它逻辑都应该放到服务中。</p>
+<p><strong>坚持</strong>把可重用的逻辑放到服务中，保持组件简单，聚焦于它们预期目的。</p>
+<h3 id="不要给输出属性加前缀"><a href="#不要给输出属性加前缀" class="headerlink" title="不要给输出属性加前缀"></a>不要给输出属性加前缀</h3><p><strong>坚持</strong>命名事件时，不要带前缀<code>on</code>。</p>
+<p><strong>坚持</strong>把事件处理器方法命名为<code>on</code>前缀之后紧跟着事件名。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> HeroComponent &#123;</div><div class="line">  <span class="meta">@Output</span>() savedTheDay = <span class="keyword">new</span> EventEmitter&lt;<span class="built_in">boolean</span>&gt;();</div><div class="line">&#125;</div><div class="line"></div><div class="line">&lt;toh-hero (savedTheDay)=<span class="string">"onSavedTheDay($event)"</span>&gt;&lt;<span class="regexp">/toh-hero&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="把表现层逻辑放到组件类里"><a href="#把表现层逻辑放到组件类里" class="headerlink" title="把表现层逻辑放到组件类里"></a>把表现层逻辑放到组件类里</h3><p><strong>坚持</strong>把表现层逻辑放进组件类中，而不要放在模板里。</p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><h3 id="使用指令来加强已有元素"><a href="#使用指令来加强已有元素" class="headerlink" title="使用指令来加强已有元素"></a>使用指令来加强已有元素</h3><p><strong>坚持</strong>当你需要有表现层逻辑，但没有模板时，使用属性型指令。</p>
+<h3 id="使用-HostListener-和-HostBinding-类装饰器"><a href="#使用-HostListener-和-HostBinding-类装饰器" class="headerlink" title="使用 HostListener 和 HostBinding 类装饰器"></a>使用 HostListener 和 HostBinding 类装饰器</h3><p><strong>考虑</strong>优先使用<code>@HostListener</code>和<code>@HostBinding</code>，而不是<code>@Directive</code>和<code>@Component</code>装饰器的<code>host</code>属性。</p>
+<p><strong>坚持</strong>让你的选择保持一致。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Directive, HostBinding, HostListener &#125; from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="meta">@Directive</span>(&#123;</div><div class="line">  selector: <span class="string">'[tohValidator]'</span></div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> ValidatorDirective &#123;</div><div class="line">  <span class="meta">@HostBinding</span>(<span class="string">'attr.role'</span>) role = <span class="string">'button'</span>;</div><div class="line">  <span class="meta">@HostListener</span>(<span class="string">'mouseenter'</span>) onMouseEnter() &#123;</div><div class="line">    <span class="comment">// do work</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h2><h3 id="注入器中，服务总是单例的"><a href="#注入器中，服务总是单例的" class="headerlink" title="注入器中，服务总是单例的"></a>注入器中，服务总是单例的</h3><p><strong>坚持</strong>在同一个注入器内，把服务当做单例使用。用它们来共享数据和功能。</p>
+<h3 id="单一职责-1"><a href="#单一职责-1" class="headerlink" title="单一职责"></a>单一职责</h3><p><strong>坚持</strong>创建单一职责的服务，用职责封装在它的上下文中。</p>
+<p><strong>坚持</strong>当服务成长到超出单一用途时，创建一个新服务。</p>
+<h3 id="提供一个服务"><a href="#提供一个服务" class="headerlink" title="提供一个服务"></a>提供一个服务</h3><p><strong>坚持</strong>将服务提供到共享范围内的顶级组件的 Angular 注入器。</p>
+<h3 id="使用-Injectable-类装饰器"><a href="#使用-Injectable-类装饰器" class="headerlink" title="使用 @Injectable() 类装饰器"></a>使用 @Injectable() 类装饰器</h3><p><strong>坚持</strong>当使用类型作为令牌来注入服务的依赖时，使用<code>@Injectable</code>类装饰器，而非<code>@Inject</code>参数装饰器。</p>
+<h2 id="数据服务"><a href="#数据服务" class="headerlink" title="数据服务"></a>数据服务</h2><h3 id="分离数据调用"><a href="#分离数据调用" class="headerlink" title="分离数据调用"></a>分离数据调用</h3><p><strong>坚持</strong>把数据操作和互动重构到服务里。</p>
+<p><strong>坚持</strong>让数据服务来负责 XHR 调用、本地储存、内存储存或者其它数据操作。</p>
+<h2 id="生命周期钩子"><a href="#生命周期钩子" class="headerlink" title="生命周期钩子"></a>生命周期钩子</h2><p>使用生命周期钩子来介入到 Angular 暴露的重要事件里。</p>
+<h3 id="实现生命周期钩子接口"><a href="#实现生命周期钩子接口" class="headerlink" title="实现生命周期钩子接口"></a>实现生命周期钩子接口</h3><p><strong>坚持</strong>实现生命周期钩子接口。</p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="Codelyzer"><a href="#Codelyzer" class="headerlink" title="Codelyzer"></a>Codelyzer</h3><p><strong>坚持</strong>使用 <a href="https://www.npmjs.com/package/codelyzer" rel="external nofollow noopener noreferrer" target="_blank">codelyzer</a> 来实施本指南。</p>
+<p><strong>考虑</strong>调整 codelyzer 的规则来满足你的需求。</p>
+<h3 id="文档模板和代码片段"><a href="#文档模板和代码片段" class="headerlink" title="文档模板和代码片段"></a>文档模板和代码片段</h3><p><strong>坚持</strong>使用文件模板或代码片段来帮助实现一致的风格和模式。</p>
+<p><strong>考虑</strong>使用 <a href="https://code.visualstudio.com/" rel="external nofollow noopener noreferrer" target="_blank">Visual Studio Code</a>的<a href="https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2" rel="external nofollow noopener noreferrer" target="_blank">代码片段</a> 来实施本风格指南。</p>
+<p><strong>考虑</strong>使用 <a href="https://atom.io/" rel="external nofollow noopener noreferrer" target="_blank">Atom</a> 的<a href="https://atom.io/packages/angular-2-typescript-snippets" rel="external nofollow noopener noreferrer" target="_blank">代码片断</a>来实施本风格指南。</p>
+<p><strong>考虑</strong>使用 <a href="http://www.sublimetext.com/" rel="external nofollow noopener noreferrer" target="_blank">Sublime Text</a>的<a href="https://github.com/orizens/sublime-angular2-snippets" rel="external nofollow noopener noreferrer" target="_blank">代码片断</a> 来实施本风格指南。</p>
+<p><strong>考虑</strong>使用 <a href="http://www.vim.org/" rel="external nofollow noopener noreferrer" target="_blank">Vim</a> 的<a href="https://github.com/mhartington/vim-angular2-snippets" rel="external nofollow noopener noreferrer" target="_blank">代码片断</a>来实施本风格指南。</p>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+  
+    
+<div style="text-align:center;color: #ccc;font-size:14px">
+------ 本文结束 ------</div>
+<br>
+<div style="border: 1px solid black">
+<div style="margin-left:10px">
+<span style="font-weight:blod">版权声明</span>
+<img src="http://7xqmjb.com1.z0.glb.clouddn.com/2017020242973cc.png">
+<br>
+<p style="font-size: 10px;line-height: 30px;margin:0 0 0 0"><a href="http://tc9011.com" style="color:#258FC6">tc9011's Notes</a> by <a href="http://tc9011.com" style="color:#258FC6">Cheng Tang</a> is licensed under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color:#258FC6" rel="external nofollow noopener noreferrer" target="_blank">Creative Commons BY-NC-ND 4.0 International License</a>.<br>
+由<a href="http://tc9011.com" style="color:#258FC6">汤诚</a>创作并维护的<a href="http://tc9011.com" style="color:#258FC6">tc9011's Notes</a>博客采用<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color:#258FC6" rel="external nofollow noopener noreferrer" target="_blank">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。<br>
+本文首发于<a href="http://tc9011.com" style="color:#258FC6">tc9011's Notes</a> 博客（ <a href="http://tc9011.com" style="color:#258FC6">http://tc9011.com</a> ），版权所有，侵权必究。</p>
+</div>
+</div>
+
+
+  
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AngularJS2/" rel="tag"># AngularJS2</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/31/Angular2官方文档学习笔记之开发指南/" rel="next" title="Angular2官方文档学习笔记之开发指南">
+                <i class="fa fa-chevron-left"></i> Angular2官方文档学习笔记之开发指南
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/02/hexo文章添加版权声明/" rel="prev" title="hexo文章添加版权声明">
+                hexo文章添加版权声明 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/01/Angular2官方文档学习笔记之风格指南/" data-title="Angular2官方文档学习笔记之风格指南" data-url="http://www.tc9011.com/2017/02/01/Angular2官方文档学习笔记之风格指南/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="http://ofx4ie5iq.bkt.clouddn.com/20161109360612.JPG" alt="汤诚">
+          <p class="site-author-name" itemprop="name">汤诚</p>
+          <p class="site-description motion-element" itemprop="description">释放精神的桎梏</p>
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/tc9011" target="_blank" title="GitHub" rel="external nofollow noopener noreferrer">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/tc9011" target="_blank" title="知乎" rel="external nofollow noopener noreferrer">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/27056866/" target="_blank" title="豆瓣" rel="external nofollow noopener noreferrer">
+                  
+                    <i class="fa fa-fw fa-film"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+            <span class="links-of-author-item"><a title="小high一下~" style="underline: none;color:red" rel="alternate" class="mw-harlem_shake_slow wobble shake" href="javascript:shake()"><i class="fa fa-music"></i> &nbsp;&nbsp;High</a></span>
+          
+
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#单一职责"><span class="nav-number">1.</span> <span class="nav-text">单一职责</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单一法则"><span class="nav-number">1.1.</span> <span class="nav-text">单一法则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单函数"><span class="nav-number">1.2.</span> <span class="nav-text">简单函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名"><span class="nav-number">2.</span> <span class="nav-text">命名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#总体命名指导原则"><span class="nav-number">2.1.</span> <span class="nav-text">总体命名指导原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用点和横杠分隔文件名"><span class="nav-number">2.2.</span> <span class="nav-text">使用点和横杠分隔文件名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#符号名与文件名"><span class="nav-number">2.3.</span> <span class="nav-text">符号名与文件名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务名"><span class="nav-number">2.4.</span> <span class="nav-text">服务名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引导"><span class="nav-number">2.5.</span> <span class="nav-text">引导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指令选择器"><span class="nav-number">2.6.</span> <span class="nav-text">指令选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为组件添加自定义前缀"><span class="nav-number">2.7.</span> <span class="nav-text">为组件添加自定义前缀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为指令添加自定义前缀"><span class="nav-number">2.8.</span> <span class="nav-text">为指令添加自定义前缀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#管道名"><span class="nav-number">2.9.</span> <span class="nav-text">管道名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单元测试文件名"><span class="nav-number">2.10.</span> <span class="nav-text">单元测试文件名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#端到端测试文件名"><span class="nav-number">2.11.</span> <span class="nav-text">端到端测试文件名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Angular-NgModule-命名"><span class="nav-number">2.12.</span> <span class="nav-text">Angular NgModule 命名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码约定"><span class="nav-number">3.</span> <span class="nav-text">代码约定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类"><span class="nav-number">3.1.</span> <span class="nav-text">类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常量"><span class="nav-number">3.2.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口"><span class="nav-number">3.3.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性和方法"><span class="nav-number">3.4.</span> <span class="nav-text">属性和方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入语句中的空行"><span class="nav-number">3.5.</span> <span class="nav-text">导入语句中的空行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用结构与Angular模块"><span class="nav-number">4.</span> <span class="nav-text">应用结构与Angular模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LIFT"><span class="nav-number">4.1.</span> <span class="nav-text">LIFT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定位"><span class="nav-number">4.2.</span> <span class="nav-text">定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#识别"><span class="nav-number">4.3.</span> <span class="nav-text">识别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扁平"><span class="nav-number">4.4.</span> <span class="nav-text">扁平</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T-DRY-（尝试不重复自己）"><span class="nav-number">4.5.</span> <span class="nav-text">T-DRY （尝试不重复自己）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总体结构指导原则"><span class="nav-number">4.6.</span> <span class="nav-text">总体结构指导原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按特性组织的目录结构"><span class="nav-number">4.7.</span> <span class="nav-text">按特性组织的目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用的根模块"><span class="nav-number">4.8.</span> <span class="nav-text">应用的根模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特性模块"><span class="nav-number">4.9.</span> <span class="nav-text">特性模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#共享特性模块"><span class="nav-number">4.10.</span> <span class="nav-text">共享特性模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#核心特性模块"><span class="nav-number">4.11.</span> <span class="nav-text">核心特性模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#防止多次导入CoreModule"><span class="nav-number">4.12.</span> <span class="nav-text">防止多次导入CoreModule</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#惰性加载的目录"><span class="nav-number">4.13.</span> <span class="nav-text">惰性加载的目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#永远不要直接导入惰性加载的目录"><span class="nav-number">4.14.</span> <span class="nav-text">永远不要直接导入惰性加载的目录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件"><span class="nav-number">5.</span> <span class="nav-text">组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#组件选择器命名"><span class="nav-number">5.1.</span> <span class="nav-text">组件选择器命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#把组件当做元素"><span class="nav-number">5.2.</span> <span class="nav-text">把组件当做元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#把模板和样式提取到它们自己的文件"><span class="nav-number">5.3.</span> <span class="nav-text">把模板和样式提取到它们自己的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内联输入和输出属性装饰器"><span class="nav-number">5.4.</span> <span class="nav-text">内联输入和输出属性装饰器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#避免重命名输入和输出"><span class="nav-number">5.5.</span> <span class="nav-text">避免重命名输入和输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成员顺序"><span class="nav-number">5.6.</span> <span class="nav-text">成员顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#把逻辑放到服务里"><span class="nav-number">5.7.</span> <span class="nav-text">把逻辑放到服务里</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不要给输出属性加前缀"><span class="nav-number">5.8.</span> <span class="nav-text">不要给输出属性加前缀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#把表现层逻辑放到组件类里"><span class="nav-number">5.9.</span> <span class="nav-text">把表现层逻辑放到组件类里</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指令"><span class="nav-number">6.</span> <span class="nav-text">指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用指令来加强已有元素"><span class="nav-number">6.1.</span> <span class="nav-text">使用指令来加强已有元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-HostListener-和-HostBinding-类装饰器"><span class="nav-number">6.2.</span> <span class="nav-text">使用 HostListener 和 HostBinding 类装饰器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务"><span class="nav-number">7.</span> <span class="nav-text">服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注入器中，服务总是单例的"><span class="nav-number">7.1.</span> <span class="nav-text">注入器中，服务总是单例的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单一职责-1"><span class="nav-number">7.2.</span> <span class="nav-text">单一职责</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提供一个服务"><span class="nav-number">7.3.</span> <span class="nav-text">提供一个服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-Injectable-类装饰器"><span class="nav-number">7.4.</span> <span class="nav-text">使用 @Injectable() 类装饰器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据服务"><span class="nav-number">8.</span> <span class="nav-text">数据服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分离数据调用"><span class="nav-number">8.1.</span> <span class="nav-text">分离数据调用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生命周期钩子"><span class="nav-number">9.</span> <span class="nav-text">生命周期钩子</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实现生命周期钩子接口"><span class="nav-number">9.1.</span> <span class="nav-text">实现生命周期钩子接口</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录"><span class="nav-number">10.</span> <span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Codelyzer"><span class="nav-number">10.1.</span> <span class="nav-text">Codelyzer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档模板和代码片段"><span class="nav-number">10.2.</span> <span class="nav-text">文档模板和代码片段</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    ♥<i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">汤诚</span>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+  var time=setInterval(function () {
+    var now=new Date();
+    var start=new Date('2015/03/03 00:00:00');
+    var t=now.getTime()-start.getTime();
+    var d,h,m,s;
+    d=Math.floor(t/1000/60/60/24);
+    h=Math.floor(t/1000/60/60%24);
+    m=Math.floor(t/1000/60%60);
+    s=Math.floor(t/1000%60);
+    mo=now.getMonth()-start.getMonth();
+    n=now.getFullYear()-start.getFullYear();
+    document.getElementById('day').innerHTML = d;
+    document.getElementById("h").innerHTML = h;
+    document.getElementById("m").innerHTML = m;
+    document.getElementById("s").innerHTML = s;
+},10);
+
+    var duoshuoQuery = {short_name:"tc9011"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.0.1"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+</body>
+</html>
