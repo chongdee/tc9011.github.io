@@ -97,7 +97,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="AngularJS2,Echarts,">
+  <meta name="keywords" content="Angular2JS,">
 
 
 
@@ -114,14 +114,17 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Echarts改造之数据分离">
-<meta property="og:url" content="http://www.tc9011.com/2017/01/08/Echarts改造之数据分离 下午2.24.44/index.html">
+<meta property="og:title" content="AngularJS2中一种button切换效果的实现（三）">
+<meta property="og:url" content="http://www.tc9011.com/2017/03/03/AngularJS2中一种button切换效果的实现（三）/index.html">
 <meta property="og:site_name" content="tc9011's">
-<meta property="og:image" content="http://7xqmjb.com1.z0.glb.clouddn.com/2017012422826banner2.png">
-<meta property="og:updated_time" content="2017-01-24T13:29:23.000Z">
+<meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/2017030386349start-2090242_960_720.jpg">
+<meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20170303638742017-03-03 20_08_20.gif">
+<meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/2017030372042017-03-03 21_06_31.gif">
+<meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20170303334032017-03-03 21_21_47.gif">
+<meta property="og:updated_time" content="2017-03-03T13:31:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Echarts改造之数据分离">
-<meta name="twitter:image" content="http://7xqmjb.com1.z0.glb.clouddn.com/2017012422826banner2.png">
+<meta name="twitter:title" content="AngularJS2中一种button切换效果的实现（三）">
+<meta name="twitter:image" content="http://ofx4ie5iq.bkt.clouddn.com/2017030386349start-2090242_960_720.jpg">
 
 
 
@@ -153,7 +156,7 @@
 
 
 
-  <title> Echarts改造之数据分离 | tc9011's </title>
+  <title> AngularJS2中一种button切换效果的实现（三） | tc9011's </title>
 </head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -309,7 +312,7 @@
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.tc9011.com/2017/01/08/Echarts改造之数据分离 下午2.24.44/">
+  <link itemprop="mainEntityOfPage" href="http://www.tc9011.com/2017/03/03/AngularJS2中一种button切换效果的实现（三）/">
 
   <span style="display:none" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
     <meta itemprop="name" content="汤诚">
@@ -333,7 +336,7 @@
             
             
               
-                Echarts改造之数据分离
+                AngularJS2中一种button切换效果的实现（三）
               
             
           </h1>
@@ -346,8 +349,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-08T20:47:48+08:00">
-                2017-01-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-03T19:23:51+08:00">
+                2017-03-03
               </time>
             
 
@@ -386,8 +389,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/01/08/Echarts改造之数据分离 下午2.24.44/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/08/Echarts改造之数据分离 下午2.24.44/" itemprop="commentCount"></span>
+                <a href="/2017/03/03/AngularJS2中一种button切换效果的实现（三）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/03/AngularJS2中一种button切换效果的实现（三）/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -418,28 +421,24 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><p><img src="http://7xqmjb.com1.z0.glb.clouddn.com/2017012422826banner2.png" alt="2017012422826banner2.png"></p>
+        <script src="/assets/js/APlayer.min.js"> </script><p><img src="http://ofx4ie5iq.bkt.clouddn.com/2017030386349start-2090242_960_720.jpg" alt="2017030386349start-2090242_960_720.jpg"></p>
 <a id="more"></a>
-<p>Echarts官网中的数据都是写死的，如何让Echarts根据后台传过来的数据进行变化呢？下面介绍一下Angular2中嵌入Echarts，并实现数据分离。</p>
-<p>先创建一个<code>line.component.ts</code>文件，<code>component</code>装饰器中这样写：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  moduleId: <span class="built_in">module</span>.id,</div><div class="line">  selector: <span class="string">'line'</span>,</div><div class="line">  templateUrl: <span class="string">'line.html'</span>,</div><div class="line">  styleUrls: [<span class="string">'line.component.css'</span>],</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>class中实现AfterViewInit接口，用于初始化组件视图后调用：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> LineComponent <span class="keyword">implements</span> AfterViewInit &#123;</div><div class="line">  ngAfterViewInit()&#123;</div><div class="line">    </div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>在class中首先定义一些变量：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">lineData:Line;</div><div class="line"> id:<span class="built_in">string</span>;</div><div class="line"> option:<span class="built_in">any</span> = &#123;</div><div class="line">   tooltip: &#123;</div><div class="line">     show: <span class="literal">true</span>,</div><div class="line">     trigger: <span class="string">'axis'</span></div><div class="line">   &#125;,</div><div class="line">   toolbox: &#123;</div><div class="line">     show: <span class="literal">true</span>,</div><div class="line">     feature: &#123;</div><div class="line">       magicType: &#123;show: <span class="literal">true</span>, <span class="keyword">type</span>: [<span class="string">'bar'</span>]&#125;,</div><div class="line">       dataZoom: &#123;show: <span class="literal">true</span>&#125;,</div><div class="line">       restore: &#123;show: <span class="literal">true</span>&#125;,</div><div class="line">       saveAsImage: &#123;show: <span class="literal">true</span>&#125;</div><div class="line">     &#125;</div><div class="line">   &#125;,</div><div class="line">   legend: &#123;</div><div class="line">     selectedMode: <span class="literal">true</span>,</div><div class="line">     selected: &#123;&#125;,</div><div class="line">     right: <span class="string">'0px'</span>,</div><div class="line">     top: <span class="string">'80px'</span>,</div><div class="line">     orient: <span class="string">'vertical'</span>,</div><div class="line">     textStyle: &#123;</div><div class="line">       fontSize: <span class="number">12</span>,</div><div class="line">     &#125;,</div><div class="line">     show: <span class="literal">true</span>,</div><div class="line">     data: []</div><div class="line">   &#125;,</div><div class="line">   xAxis: &#123;</div><div class="line">     data: [],</div><div class="line">     axisLabel: &#123;</div><div class="line">       interval: <span class="number">0</span>,</div><div class="line">     &#125;</div><div class="line">   &#125;,</div><div class="line">   grid: &#123;</div><div class="line">     left: <span class="string">'9%'</span>,</div><div class="line">     x2: <span class="number">150</span>,</div><div class="line">   &#125;,</div><div class="line">   yAxis: [</div><div class="line">     &#123;</div><div class="line">       <span class="keyword">type</span>: <span class="string">'value'</span>,</div><div class="line">       name: <span class="string">''</span>,</div><div class="line">     &#125;</div><div class="line">   ],</div><div class="line">   series: []</div><div class="line"> &#125;;</div></pre></td></tr></table></figure>
-<p>在需要调用<code>line.component.ts</code>的父组件html中添加下面代码，把父组件中的myOption中的数据传递给data属性：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">line</span> [<span class="attr">data</span>]=<span class="string">'myOption'</span>&gt;</span><span class="tag">&lt;/<span class="name">line</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>在父组件的ts文件中，从后端读取数据，并把数据写入myOption（这里其实对原始数据进行了一次处理，让传给<code>line.component.ts</code>的数据更加容易处理）：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">myOption:<span class="built_in">any</span>;  </div><div class="line"><span class="keyword">constructor</span>(<span class="params"></span>)&#123;</div><div class="line">	<span class="keyword">this</span>.myOption = &#123;</div><div class="line">     	 <span class="string">"data"</span>: []</div><div class="line">    	&#125;;</div><div class="line">&#125;</div><div class="line">setMyOption()&#123;</div><div class="line">  <span class="keyword">let</span> that = <span class="keyword">this</span>;</div><div class="line">  <span class="keyword">let</span> obj = &#123;</div><div class="line">              <span class="string">"name"</span>: fieldkey,</div><div class="line">              <span class="string">"value"</span>: [],</div><div class="line">              <span class="string">"systime"</span>: []</div><div class="line">            &#125;;</div><div class="line">  that.myOption.data = [];</div><div class="line">  <span class="comment">//先往obj中写入数据，再往data数组中写入对象</span></div><div class="line">&#125;</div><div class="line">getUrlData()&#123;</div><div class="line">  <span class="comment">//从后端读取数据</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>再回到<code>line.component.ts</code>中，引入myOption中的数据：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Input</span>() data:<span class="built_in">any</span>;</div></pre></td></tr></table></figure>
-<p>实现AfterViewInit接口：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">ngAfterViewInit() &#123;</div><div class="line">    <span class="keyword">let</span> that = <span class="keyword">this</span>;</div><div class="line">    that.lineData = that.data;  <span class="comment">//data赋值给linedata</span></div><div class="line">  </div><div class="line">    <span class="comment">//清空原始数组</span></div><div class="line">    that.option.legend.data = [];</div><div class="line">    that.option.series.data = [];</div><div class="line">    that.option.xAxis.data = [];</div><div class="line">    that.option.series = [];</div><div class="line">  </div><div class="line">    <span class="comment">//配置option</span></div><div class="line">    that.setDataToOption();</div><div class="line">  </div><div class="line">    <span class="comment">//调用echarts画图</span></div><div class="line">    that.createCharts();</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<p>往echarts中写入从后端读取的数据：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">setDataToOption() &#123;</div><div class="line">  <span class="keyword">let</span> that = <span class="keyword">this</span>;</div><div class="line">  <span class="keyword">let</span> dataLength = 		      <span class="keyword">this</span>.lineData.data.length;</div><div class="line">  <span class="keyword">let</span> xAxisData = that.option.xAxis.data;</div><div class="line">  <span class="keyword">let</span> legend = that.option.legend;</div><div class="line"> </div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> n = <span class="number">0</span>; n &lt; dataLength; n++) &#123;</div><div class="line">    <span class="keyword">let</span> item = that.lineData.data[n];</div><div class="line">    legend.selected[item.name] = <span class="literal">false</span>; <span class="comment">//往legend的selected中推送数据</span></div><div class="line">    <span class="keyword">let</span> seriesData = &#123;</div><div class="line">      name: item.name,</div><div class="line">      <span class="keyword">type</span>: <span class="string">'line'</span>,</div><div class="line">      showAllSymbol: <span class="literal">true</span>,</div><div class="line">      data: []</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">let</span> legendData = &#123;</div><div class="line">      name: item.name,</div><div class="line">      icon: <span class="string">'square'</span></div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">let</span> arr = <span class="built_in">Object</span>.keys(item.value);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> t = <span class="number">0</span>; t &lt; arr.length; t++) &#123;</div><div class="line">      seriesData.data.push(item.value[t]);</div><div class="line">      <span class="keyword">if</span> (n === <span class="number">0</span>) &#123;</div><div class="line">        xAxisData.push(item.systime[t]); <span class="comment">//往x轴推送数据</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    legend.data.push(legendData);   <span class="comment">//往legend的data中推送数据</span></div><div class="line">    that.option.series.push(seriesData);    <span class="comment">//往series中推送数据</span></div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  <span class="comment">//设置x轴间隔</span></div><div class="line">  <span class="keyword">if</span> (xAxisData.length &gt; <span class="number">10</span>) &#123;</div><div class="line">    that.option.xAxis.axisLabel.interval = <span class="built_in">Math</span>.ceil(xAxisData.length/<span class="number">10</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>创建echarts：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">createCharts() &#123;</div><div class="line">   <span class="keyword">let</span> that = <span class="keyword">this</span>;</div><div class="line">   <span class="keyword">let</span> dom:<span class="built_in">any</span> = <span class="built_in">document</span>.getElementById(that.id);</div><div class="line">   <span class="keyword">let</span> myChart:<span class="built_in">any</span> = echarts.init(dom, <span class="string">'macarons'</span>);</div><div class="line">   myChart.setOption(that.option);</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<p>这样就实现了从后端读取数据，然后echarts显示在界面上。</p>
+<p>之前在<a href="http://tc9011.com/2016/12/08/AngularJS2%E4%B8%AD%E4%B8%80%E7%A7%8Dbutton%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_blank" rel="external">AngularJS2中一种button切换效果的实现</a>和<a href="http://tc9011.com/2017/01/11/AngularJS2%E4%B8%AD%E4%B8%80%E7%A7%8Dbutton%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C%E7%9A%84%E5%AE%9E%E7%8E%B0%EF%BC%88%E4%BA%8C%EF%BC%89/" target="_blank" rel="external">AngularJS2中一种button切换效果的实现（二）</a>中实现了按钮的切换效果，但是方法比较low，这次我们使用Angular2的指令来实现。</p>
+<h2 id="指令实现hover效果"><a href="#指令实现hover效果" class="headerlink" title="指令实现hover效果"></a>指令实现hover效果</h2><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Directive, ElementRef, HostListener, Input &#125; from <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line"><span class="meta">@Directive</span>(&#123;</div><div class="line">  selector: <span class="string">'[myHighlight]'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> HighlightDirective &#123;</div><div class="line">  <span class="keyword">constructor</span>(<span class="params"><span class="keyword">private</span> el: ElementRef</span>) &#123; &#125;</div><div class="line"></div><div class="line">  <span class="meta">@HostListener</span>(<span class="string">'mouseenter'</span>) onMouseEnter() &#123;</div><div class="line">    <span class="keyword">this</span>.highlight(<span class="string">'red'</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="meta">@HostListener</span>(<span class="string">'mouseleave'</span>) onMouseLeave() &#123;</div><div class="line">    <span class="keyword">this</span>.highlight(<span class="literal">null</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">private</span> highlight(color: <span class="built_in">string</span>) &#123;</div><div class="line">    <span class="keyword">this</span>.el.nativeElement.style.backgroundColor = color;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">myHighlight</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>按钮一<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">myHighlight</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>按钮二<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">myHighlight</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>按钮三<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.btn</span>&#123;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#3399ff</span>;</div><div class="line">  <span class="attribute">color</span>: white;</div><div class="line">  <span class="attribute">border</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">outline</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">cursor</span>: hand;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>hover的效果直接参考<a href="https://angular.cn/docs/ts/latest/guide/attribute-directives.html" rel="external nofollow noopener noreferrer" target="_blank">Angular官网</a>的代码。</p>
+<p><img src="http://ofx4ie5iq.bkt.clouddn.com/20170303638742017-03-03 20_08_20.gif" alt="20170303638742017-03-03 20_08_20.gif"></p>
+<h2 id="指令实现click效果"><a href="#指令实现click效果" class="headerlink" title="指令实现click效果"></a>指令实现click效果</h2><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Directive, ElementRef, HostListener, Input &#125; from <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line"><span class="meta">@Directive</span>(&#123;</div><div class="line">  selector: <span class="string">'[myHighlight]'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> HighlightDirective &#123;</div><div class="line">  <span class="keyword">constructor</span>(<span class="params"><span class="keyword">private</span> el: ElementRef</span>) &#123; &#125;</div><div class="line"></div><div class="line">  <span class="meta">@HostListener</span>(<span class="string">'click'</span>) onMouseClick() &#123;</div><div class="line">    <span class="keyword">this</span>.clickhighlight(<span class="string">"black"</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">private</span> clickhighlight(color: <span class="built_in">string</span>) &#123;</div><div class="line">    <span class="keyword">let</span> obj = <span class="keyword">this</span>.el.nativeElement;</div><div class="line">    <span class="keyword">let</span> btns = obj.parentNode.children;</div><div class="line">    </div><div class="line">    <span class="comment">//背景色全部重置</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;btns.length; i++)&#123;</div><div class="line">      btns[i].style.backgroundColor = <span class="string">"#3399ff"</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//设置当前点击对象的背景色</span></div><div class="line">    obj.style.backgroundColor = color;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">myHighlight</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>按钮一<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">myHighlight</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>按钮二<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">myHighlight</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>按钮三<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.btn</span>&#123;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#3399ff</span>;</div><div class="line">  <span class="attribute">color</span>: white;</div><div class="line">  <span class="attribute">border</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">outline</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">cursor</span>: hand;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>click效果仍然用<code>@HostListener</code>装饰器引用属性型指令的宿主元素，首先把所有button的背景颜色重置，然后再设置当前点击对象的背景颜色，这样就达到了点击后背景颜色变化的效果。</p>
+<p><img src="http://ofx4ie5iq.bkt.clouddn.com/2017030372042017-03-03 21_06_31.gif" alt="2017030372042017-03-03 21_06_31.gif"></p>
+<h2 id="指令实现click加hover效果"><a href="#指令实现click加hover效果" class="headerlink" title="指令实现click加hover效果"></a>指令实现click加hover效果</h2><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Directive, ElementRef, HostListener, Input &#125; from <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line"><span class="meta">@Directive</span>(&#123;</div><div class="line">  selector: <span class="string">'[myHighlight]'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> HighlightDirective &#123;</div><div class="line">  <span class="keyword">constructor</span>(<span class="params"><span class="keyword">private</span> el: ElementRef</span>) &#123; &#125;</div><div class="line"></div><div class="line">  <span class="meta">@HostListener</span>(<span class="string">'click'</span>) onMouseClick() &#123;</div><div class="line">    <span class="keyword">this</span>.clickhighlight(<span class="string">"black"</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">private</span> clickhighlight(color: <span class="built_in">string</span>) &#123;</div><div class="line">    <span class="keyword">let</span> obj = <span class="keyword">this</span>.el.nativeElement;</div><div class="line">    <span class="keyword">let</span> btns = obj.parentNode.children;</div><div class="line">    </div><div class="line">    <span class="comment">//背景色全部重置</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;btns.length; i++)&#123;</div><div class="line">      btns[i].style.backgroundColor = <span class="string">"#3399ff"</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//设置当前点击对象的背景色</span></div><div class="line">    obj.style.backgroundColor = color;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">myHighlight</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>按钮一<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">myHighlight</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>按钮二<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">myHighlight</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>按钮三<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.btn</span>&#123;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#3399ff</span>;</div><div class="line">  <span class="attribute">color</span>: white;</div><div class="line">  <span class="attribute">border</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">outline</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">cursor</span>: hand;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.btn</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">  <span class="attribute">background</span>: black <span class="meta">!important</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>配合上文click效果，只要加上一行css代码就可以实现click和hover的组合效果，此处务必使用hover伪类，并用<code>!important</code>来提升样式的优先级，如果用<code>@HostListener</code>装饰器，mouseenter、mouseleave、click三者会打架：</p>
+<p><img src="http://ofx4ie5iq.bkt.clouddn.com/20170303334032017-03-03 21_21_47.gif" alt="20170303334032017-03-03 21_21_47.gif"></p>
       
     </div>
 
@@ -482,9 +481,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/AngularJS2/" rel="tag"># AngularJS2</a>
-          
-            <a href="/tags/Echarts/" rel="tag"># Echarts</a>
+            <a href="/tags/Angular2JS/" rel="tag"># Angular2JS</a>
           
         </div>
       
@@ -493,8 +490,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/02/Angular2官方文档学习笔记之架构概览/" rel="next" title="Angular2官方文档学习笔记之架构概览">
-                <i class="fa fa-chevron-left"></i> Angular2官方文档学习笔记之架构概览
+              <a href="/2017/02/25/《JavaScript DOM编程艺术》学习笔记/" rel="next" title="《JavaScript DOM编程艺术》学习笔记">
+                <i class="fa fa-chevron-left"></i> 《JavaScript DOM编程艺术》学习笔记
               </a>
             
           </div>
@@ -502,10 +499,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/11/AngularJS2中一种button切换效果的实现（二）/" rel="prev" title="AngularJS2中一种button切换效果的实现（二）">
-                AngularJS2中一种button切换效果的实现（二） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -520,7 +513,7 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/01/08/Echarts改造之数据分离 下午2.24.44/" data-title="Echarts改造之数据分离" data-content="" data-url="http://www.tc9011.com/2017/01/08/Echarts改造之数据分离 下午2.24.44/">
+        <div class="ds-share flat" data-thread-key="2017/03/03/AngularJS2中一种button切换效果的实现（三）/" data-title="AngularJS2中一种button切换效果的实现（三）" data-content="" data-url="http://www.tc9011.com/2017/03/03/AngularJS2中一种button切换效果的实现（三）/">
   <div class="ds-share-inline">
     <ul class="ds-share-icons-16">
 
@@ -547,7 +540,7 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/01/08/Echarts改造之数据分离 下午2.24.44/" data-title="Echarts改造之数据分离" data-url="http://www.tc9011.com/2017/01/08/Echarts改造之数据分离 下午2.24.44/">
+      <div class="ds-thread" data-thread-key="2017/03/03/AngularJS2中一种button切换效果的实现（三）/" data-title="AngularJS2中一种button切换效果的实现（三）" data-url="http://www.tc9011.com/2017/03/03/AngularJS2中一种button切换效果的实现（三）/">
       </div>
     
   </div>
@@ -571,8 +564,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="http://ofx4ie5iq.bkt.clouddn.com/20161109360612.JPG" alt="汤诚">
           <p class="site-author-name" itemprop="name">汤诚</p>
@@ -657,6 +659,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#指令实现hover效果"><span class="nav-number">1.</span> <span class="nav-text">指令实现hover效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指令实现click效果"><span class="nav-number">2.</span> <span class="nav-text">指令实现click效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指令实现click加hover效果"><span class="nav-number">3.</span> <span class="nav-text">指令实现click加hover效果</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
