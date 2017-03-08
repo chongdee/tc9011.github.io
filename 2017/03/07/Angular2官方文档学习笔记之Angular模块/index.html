@@ -97,7 +97,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="html,">
+  <meta name="keywords" content="AngularJS2,">
 
 
 
@@ -114,14 +114,14 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="听说你的placeholder想换行？">
-<meta property="og:url" content="http://www.tc9011.com/2017/02/18/听说你的placeholder想换行？/index.html">
+<meta property="og:title" content="Angular2官方文档学习笔记之Angular模块">
+<meta property="og:url" content="http://www.tc9011.com/2017/03/07/Angular2官方文档学习笔记之Angular模块/index.html">
 <meta property="og:site_name" content="tc9011's">
-<meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/2017021885090placeholder2.png">
-<meta property="og:updated_time" content="2017-02-18T09:40:42.000Z">
+<meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/2017030799173banner-angularjs.jpg">
+<meta property="og:updated_time" content="2017-03-07T14:15:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="听说你的placeholder想换行？">
-<meta name="twitter:image" content="http://ofx4ie5iq.bkt.clouddn.com/2017021885090placeholder2.png">
+<meta name="twitter:title" content="Angular2官方文档学习笔记之Angular模块">
+<meta name="twitter:image" content="http://ofx4ie5iq.bkt.clouddn.com/2017030799173banner-angularjs.jpg">
 
 
 
@@ -153,7 +153,7 @@
 
 
 
-  <title> 听说你的placeholder想换行？ | tc9011's </title>
+  <title> Angular2官方文档学习笔记之Angular模块 | tc9011's </title>
 </head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -309,7 +309,7 @@
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.tc9011.com/2017/02/18/听说你的placeholder想换行？/">
+  <link itemprop="mainEntityOfPage" href="http://www.tc9011.com/2017/03/07/Angular2官方文档学习笔记之Angular模块/">
 
   <span style="display:none" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
     <meta itemprop="name" content="汤诚">
@@ -333,7 +333,7 @@
             
             
               
-                听说你的placeholder想换行？
+                Angular2官方文档学习笔记之Angular模块
               
             
           </h1>
@@ -346,8 +346,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-18T17:31:11+08:00">
-                2017-02-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-07T22:11:12+08:00">
+                2017-03-07
               </time>
             
 
@@ -386,8 +386,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/18/听说你的placeholder想换行？/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/18/听说你的placeholder想换行？/" itemprop="commentCount"></span>
+                <a href="/2017/03/07/Angular2官方文档学习笔记之Angular模块/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/07/Angular2官方文档学习笔记之Angular模块/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -418,23 +418,63 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><p><img src="http://ofx4ie5iq.bkt.clouddn.com/2017021885090placeholder2.png" alt="2017021885090placeholder2.png"></p>
+        <script src="/assets/js/APlayer.min.js"> </script><p><img src="http://ofx4ie5iq.bkt.clouddn.com/2017030799173banner-angularjs.jpg" alt="2017030799173banner-angularjs.jpg"></p>
 <a id="more"></a>
-<p>这是同事遇到的一个问题，在<code>&lt;textarea&gt;</code>标签里面不仅要加上placeholder属性，还要换行。<a href="http://stackoverflow.com/questions/7312623/insert-line-break-inside-placeholder-attribute-of-a-textarea" rel="external nofollow noopener noreferrer" target="_blank">在stackoverflow</a>上有相关的讨论，主要有下面几种做法：</p>
-<h2 id="官方说明"><a href="#官方说明" class="headerlink" title="官方说明"></a>官方说明</h2><p><a href="http://www.w3.org/TR/html5/forms.html#the-placeholder-attribute" rel="external nofollow noopener noreferrer" target="_blank">官方说明：</a></p>
-<blockquote>
-<p>The placeholder attribute represents a <em>short</em> hint (a word or short phrase) intended to aid the user with data entry when the control has no value. A hint could be a sample value or a brief description of the expected format. <strong>The attribute, if specified, must have a value that contains no U+000A LINE FEED (LF) or U+000D CARRIAGE RETURN (CR) characters.</strong></p>
-<p>The <code>placeholder</code> attribute should not be used as a replacement for a <code>label</code>. For a longer hint or other advisory text, place the text next to the control.</p>
-</blockquote>
-<p>翻译过来就是：</p>
-<p id="div-border-left-red">placeholder属性是用来帮助用户输入的简短提示（一个字或者一个短语），这个提示应该是简单的数值或者简短的描述。placeholder属性不应该作为<code>label</code>的替代者。对于较长或者复杂的提示，将文本置于控件旁边。</p>
+<h2 id="Angular模块化"><a href="#Angular模块化" class="headerlink" title="Angular模块化"></a>Angular模块化</h2><p>Angular 模块是一个由<code>@NgModule</code>装饰器提供元数据的类，元数据包括：</p>
+<ul>
+<li>声明哪些组件、指令、管道<em>属于</em>该模块。</li>
+<li>公开某些类，以便其它的组件模板可以使用它们。</li>
+<li>导入其它模块，从其它模块中获得<em>本</em>模块所需的组件、指令和管道。</li>
+<li>在应用程序级提供服务，以便应用中的任何组件都能使用它。</li>
+</ul>
+<h2 id="应用的根模块"><a href="#应用的根模块" class="headerlink" title="应用的根模块"></a>应用的根模块</h2><p><code>BrowserModule</code>注册了一些关键的应用服务提供商。 它还包括了一些通用的指令，例如<code>NgIf</code>和<code>NgFor</code>，所以这些指令在该模块的任何组件模板中都是可用的。</p>
+<p><code>@NgModule.bootstrap</code>属性把这个<code>AppComponent</code>标记为<em>引导 (bootstrap) 组件</em>。 当 Angular 引导应用时，它会在 DOM 中渲染<code>AppComponent</code>，并把结果放进<code>index.html</code>的<code>&lt;my-app&gt;</code>元素标记内部。</p>
+<h2 id="引导根模块"><a href="#引导根模块" class="headerlink" title="引导根模块"></a>引导根模块</h2><h3 id="通过即时-JiT-编译器动态引导"><a href="#通过即时-JiT-编译器动态引导" class="headerlink" title="通过即时 (JiT) 编译器动态引导"></a>通过即时 (JiT) 编译器动态引导</h3><p id="div-border-left-green">什么是Angular编译器？<br><br><em>Angular编译器</em>会把我们所写的应用代码转换成高性能的JavaScript代码。 在编译过程中，<code>@NgModule</code>的元数据扮演了很重要的角色。<br><br><code>@NgModule</code>元数据告诉<em>Angular编译器</em>要为当前模块编译哪些组件，以及如何把当前模块和其它模块链接起来。</p>
 
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="使用-amp-10"><a href="#使用-amp-10" class="headerlink" title="使用&amp;#10;"></a>使用<code>&amp;#10;</code></h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">"foo"</span> <span class="attr">placeholder</span>"<span class="attr">hello</span> <span class="attr">you</span>&amp;#<span class="attr">10</span>;<span class="attr">Second</span> <span class="attr">line</span>&amp;#<span class="attr">10</span>;<span class="attr">Third</span> <span class="attr">line</span>"&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>这个不能跨浏览器，在ie、chrome下是可以的，但是在firefox和safari中不行。</p>
-<h3 id="css解决办法"><a href="#css解决办法" class="headerlink" title="css解决办法"></a>css解决办法</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-pseudo">::-webkit-input-placeholder</span><span class="selector-pseudo">::before</span> &#123;</div><div class="line">  <span class="attribute">content</span>: <span class="string">"FIRST\000ASECOND\000ATHIRD"</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-pseudo">::-moz-placeholder</span><span class="selector-pseudo">::before</span> &#123;</div><div class="line">  <span class="attribute">content</span>: <span class="string">"FIRST\000ASECOND\000ATHIRD"</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-pseudo">:-ms-input-placeholder</span><span class="selector-pseudo">::before</span> &#123;</div><div class="line">  <span class="attribute">content</span>: <span class="string">"FIRST\000ASECOND\000ATHIRD"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>只适用于webkit内核的浏览器（chrome、safari），对firefox和ie没有效果。</p>
-<h3 id="使用jQuery的watermark控件"><a href="#使用jQuery的watermark控件" class="headerlink" title="使用jQuery的watermark控件"></a>使用jQuery的watermark控件</h3><p>通过<a href="https://github.com/marioestrada/jQuery-Watermark" rel="external nofollow noopener noreferrer" target="_blank">watermark</a>可以全平台兼容。下载控件后，引入到项目，然后在<code>&lt;textarea&gt;</code>中定义<code>jq_watermark</code>的class。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"jquery.watermark.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"comments"</span>&gt;</span>Comments:<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">id</span>=<span class="string">"comments"</span> <span class="attr">placeholder</span>=<span class="string">"Tell Us&lt;br/&gt;What do you think...&lt;br/&gt;We are here"</span> <span class="attr">class</span>=<span class="string">"jq_watermark"</span> <span class="attr">rows</span>=<span class="string">"3"</span> <span class="attr">cols</span>=<span class="string">"80"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Angular 编译器在浏览器中编译并引导该应用:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// The browser platform with a compiler</span></div><div class="line"><span class="keyword">import</span> &#123; platformBrowserDynamic &#125; from <span class="string">'@angular/platform-browser-dynamic'</span>;</div><div class="line"></div><div class="line"><span class="comment">// The app module</span></div><div class="line"><span class="keyword">import</span> &#123; AppModule &#125; from <span class="string">'./app/app.module'</span>;</div><div class="line"></div><div class="line"><span class="comment">// 编译并运行模块</span></div><div class="line">platformBrowserDynamic().bootstrapModule(AppModule);</div></pre></td></tr></table></figure>
+<h3 id="使用预编译器-AoT-进行静态引导"><a href="#使用预编译器-AoT-进行静态引导" class="headerlink" title="使用预编译器 (AoT) 进行静态引导"></a>使用预编译器 (AoT) 进行静态引导</h3><p>静态方案可以生成更小、启动更快的应用，建议优先使用它，特别是在移动设备或高延迟网络下。</p>
+<p>使用<em>静态</em>选项，Angular 编译器作为构建流程的一部分提前运行，生成一组类工厂。它们的核心就是<code>AppModuleNgFactory</code>。</p>
+<p>引导预编译的<code>AppModuleNgFactory</code>的语法和动态引导<code>AppModule</code>类的方式很相似。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// The browser platform without a compiler</span></div><div class="line"><span class="keyword">import</span> &#123; platformBrowser &#125; from <span class="string">'@angular/platform-browser'</span>;</div><div class="line"></div><div class="line"><span class="comment">// The app module factory produced by the static offline compiler</span></div><div class="line"><span class="keyword">import</span> &#123; AppModuleNgFactory &#125; from <span class="string">'./app/app.module.ngfactory'</span>;</div><div class="line"></div><div class="line"><span class="comment">// Launch with the app module factory.</span></div><div class="line">platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);</div></pre></td></tr></table></figure>
+<p>由于整个应用都是预编译的，所以我们不用把 <em>Angular 编译器</em>一起发到浏览器中，也不用在浏览器中进行编译。</p>
+<p>下载到浏览器中的应用代码比动态版本要小得多，并且能立即执行。引导的性能可以得到显著提升。</p>
+<p>无论是 JiT 还是 AoT 编译器都会从同一份<code>AppModule</code>源码中生成一个<code>AppModuleNgFactory</code>类。 <strong>JiT 编译器动态地在浏览器的内存中创建这个工厂类</strong>。 <strong>AoT 编译器把工厂输出成一个物理文件</strong>，也就是我们在静态版本<code>main.ts</code>中导入的那个。</p>
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>自定义的组件和指令声明在模块的<code>declarations</code>中。</p>
+<h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><p><code>BrowserModule</code>导入了<code>CommonModule</code>并且<a href="https://angular.cn/docs/ts/latest/cookbook/ngmodule-faq.html#q-re-export" rel="external nofollow noopener noreferrer" target="_blank"><em>重新导出</em></a>了它。 最终的效果是：只要导入<code>BrowserModule</code>就自动获得了<code>CommonModule</code>中的指令。</p>
+<p id="div-border-left-green">模块可以重新导出其它模块，这会导致重新导出它们导出的所有类。 纯服务类的模块不会导出任何可供其它模块使用的<a href="https://angular.cn/docs/ts/latest/cookbook/ngmodule-faq.html#q-declarable" rel="external nofollow noopener noreferrer" target="_blank">可声明类</a>，例如<code>HttpModule</code></p>
+
+<p id="div-border-left-red">组件、指令和管道<em>只能</em>属于一个模块。<strong>永远不要再次声明属于其它模块的类。</strong></p>
+
+<p>如果有两个同名指令，只要在 import 时使用<code>as</code>关键字来为第二个指令创建个别名就可以了。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;</div><div class="line">  HighlightDirective as ContactHighlightDirective</div><div class="line">&#125; from <span class="string">'./contact/highlight.directive'</span>;</div></pre></td></tr></table></figure>
+<h2 id="特性模块"><a href="#特性模块" class="headerlink" title="特性模块"></a>特性模块</h2><h3 id="特性模块-1"><a href="#特性模块-1" class="headerlink" title="特性模块"></a>特性模块</h3><p>我们<em>引导</em>根模块来<em>启动</em>应用，但<em>导入</em>特性模块来<em>扩展</em>应用。特性模块可以对其它模块暴露或隐藏自己的实现。</p>
+<p>几乎所有要在浏览器中使用的应用的<strong>根模块</strong>（<code>AppModule</code>）都应该从<code>@angular/platform-browser</code>中导入<code>BrowserModule</code>。</p>
+<h3 id="添加-ContactModule"><a href="#添加-ContactModule" class="headerlink" title="添加 ContactModule"></a>添加 <em>ContactModule</em></h3><p><code>BrowserModule</code>还从<code>@angular/common</code>中重新导出了<code>CommonModule</code>，这意味着<code>AppModule</code>中的组件也同样可以访问那些每个应用都需要的Angular指令，如<code>NgIf</code>和<code>NgFor</code>。</p>
+<p>在其它任何模块中都<em>不要导入</em><code>BrowserModule</code>。 <em>特性模块</em>和<em>惰性加载模块</em>应该改成导入<code>CommonModule</code>。 它们需要通用的指令。它们不需要重新初始化全应用级的提供商。</p>
+<h2 id="通过路由器惰性加载模块"><a href="#通过路由器惰性加载模块" class="headerlink" title="通过路由器惰性加载模块"></a>通过路由器惰性加载模块</h2><h3 id="应用路由"><a href="#应用路由" class="headerlink" title="应用路由"></a>应用路由</h3><p>惰性加载模块的位置是<em>字符串</em>而不是<em>类型</em>。 在本应用中，该字符串同时标记出了模块<em>文件</em>和模块<em>类</em>，两者用<code>#</code>分隔开。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123; path: <span class="string">'crisis'</span>, loadChildren: <span class="string">'app/crisis/crisis.module#CrisisModule'</span> &#125;,</div><div class="line">&#123; path: <span class="string">'heroes'</span>, loadChildren: <span class="string">'app/hero/hero.module#HeroModule'</span> &#125;</div></pre></td></tr></table></figure>
+<h3 id="路由到特性模块"><a href="#路由到特性模块" class="headerlink" title="路由到特性模块"></a>路由到特性模块</h3><p>当需要为根模块和特性模块分别提供不同的<code>导入</code>值时，<strong>forRoot</strong>和<strong>forChild</strong>是约定俗成的方法名。</p>
+<h2 id="共享模块"><a href="#共享模块" class="headerlink" title="共享模块"></a>共享模块</h2><p>通过让<code>SharedModule</code>重新导出<code>CommonModule</code>和<code>FormsModule</code>模块，可以消除<code>CommonModule</code>和<code>FormsModule</code>模块重复导入。</p>
+<p><strong><p id="div-border-left-red">不要</p></strong>在共享模块中把应用级单例添加到<code>providers</code>中。 否则如果一个惰性加载模块导入了此共享模块，就会导致它自己也生成一份此服务的实例。</p><p></p>
+<h2 id="核心模块"><a href="#核心模块" class="headerlink" title="核心模块"></a>核心模块</h2><p>把这些一次性的类收集到<code>CoreModule</code>中，并且隐藏它们的实现细节。 简化之后的根模块<code>AppModule</code>导入<code>CoreModule</code>来获取其能力。</p>
+<h2 id="用forRoot配置核心服务"><a href="#用forRoot配置核心服务" class="headerlink" title="用forRoot配置核心服务"></a>用forRoot配置核心服务</h2><p>模块的静态方法<strong>forRoot</strong>可以同时提供并配置服务。 它接收一个服务配置对象，并返回一个<a href="https://angular.cn/docs/ts/latest/api/core/index/ModuleWithProviders-interface.html" rel="external nofollow noopener noreferrer" target="_blank">ModuleWithProviders</a>。这个简单对象具有两个属性：</p>
+<ul>
+<li><code>ngModule</code> - <code>CoreModule</code>类</li>
+<li><code>providers</code> - 配置好的服务提供商</li>
+</ul>
+<p>根模块<code>AppModule</code>会导入<code>CoreModule</code>类并把它的<code>providers</code>添加到<code>AppModule</code>的服务提供商中。</p>
+<p>一个可选的、被注入的<code>UserServiceConfig</code>服务扩展核心的<code>UserService</code>服务。 如果有<code>UserServiceConfig</code>，<code>UserService</code>就会据此设置用户名。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">src/app/core/user.service.ts (constructor)</div><div class="line"></div><div class="line">constructor(@Optional() config: UserServiceConfig) &#123;</div><div class="line">  if (config) &#123; this._userName = config.userName; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>CoreModule.forRoot</code>接收<code>UserServiceConfig</code>对象：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">src/app/core/core.module.ts (forRoot)</div><div class="line"></div><div class="line"><span class="keyword">static</span> forRoot(config: UserServiceConfig): ModuleWithProviders &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    ngModule: CoreModule,</div><div class="line">    providers: [</div><div class="line">      &#123;provide: UserServiceConfig, useValue: config &#125;</div><div class="line">    ]</div><div class="line">  &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在<code>AppModule</code>的<code>imports</code><em>列表</em>中调用它:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">imports: [</div><div class="line">  BrowserModule,</div><div class="line">  ContactModule,</div><div class="line">  CoreModule.forRoot(&#123;userName: <span class="string">'Miss Marple'</span>&#125;),</div><div class="line">  AppRoutingModule</div><div class="line">],</div></pre></td></tr></table></figure>
+<p id="div-border-left-yellow">只在应用的根模块<code>AppModule</code>中调用<code>forRoot</code>。 如果在其它模块（特别是惰性加载模块）中调用它则违反了设计意图，并会导致运行时错误。<br><br>别忘了<em>导入</em>其返回结果，而且不要把它添加到<code>@NgModule</code>的其它任何列表中。</p>
+
+<h2 id="禁止重复导入CoreModule"><a href="#禁止重复导入CoreModule" class="headerlink" title="禁止重复导入CoreModule"></a>禁止重复导入CoreModule</h2><p>只有根模块<code>AppModule</code>才能导入<code>CoreModule</code>。 如果惰性加载模块导入了它，就会<a href="https://angular.cn/docs/ts/latest/cookbook/ngmodule-faq.html#q-why-it-is-bad" rel="external nofollow noopener noreferrer" target="_blank">出问题</a>。</p>
+<p>如果我们错误的把<code>CoreModule</code>导入了一个惰性加载模块， <code>@SkipSelf</code>让 Angular 在其父注入器中查找<code>CoreModule</code>，这次，它的父注入器却是根注入器了。 当然，这次它找到了由根模块<code>AppModule</code>导入的实例。 该构造函数检测到存在<code>parentModule</code>，于是抛出一个错误。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">constructor (@Optional() @SkipSelf() parentModule: CoreModule) &#123;</div><div class="line">  if (parentModule) &#123;</div><div class="line">    throw new Error(</div><div class="line">      'CoreModule is already loaded. Import it in the AppModule only');</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -477,7 +517,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/html/" rel="tag"># html</a>
+            <a href="/tags/AngularJS2/" rel="tag"># AngularJS2</a>
           
         </div>
       
@@ -486,8 +526,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/16/[翻译]-angular2-webpack-starter/" rel="next" title="[翻译]angular2-webpack-starter">
-                <i class="fa fa-chevron-left"></i> [翻译]angular2-webpack-starter
+              <a href="/2017/03/06/Angular2官方文档学习笔记之CLI快速起步/" rel="next" title="Angular2官方文档学习笔记之CLI快速起步">
+                <i class="fa fa-chevron-left"></i> Angular2官方文档学习笔记之CLI快速起步
               </a>
             
           </div>
@@ -495,10 +535,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/25/《JavaScript DOM编程艺术》学习笔记/" rel="prev" title="《JavaScript DOM编程艺术》学习笔记">
-                《JavaScript DOM编程艺术》学习笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -513,7 +549,7 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/02/18/听说你的placeholder想换行？/" data-title="听说你的placeholder想换行？" data-content="" data-url="http://www.tc9011.com/2017/02/18/听说你的placeholder想换行？/">
+        <div class="ds-share flat" data-thread-key="2017/03/07/Angular2官方文档学习笔记之Angular模块/" data-title="Angular2官方文档学习笔记之Angular模块" data-content="" data-url="http://www.tc9011.com/2017/03/07/Angular2官方文档学习笔记之Angular模块/">
   <div class="ds-share-inline">
     <ul class="ds-share-icons-16">
 
@@ -540,7 +576,7 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/18/听说你的placeholder想换行？/" data-title="听说你的placeholder想换行？" data-url="http://www.tc9011.com/2017/02/18/听说你的placeholder想换行？/">
+      <div class="ds-thread" data-thread-key="2017/03/07/Angular2官方文档学习笔记之Angular模块/" data-title="Angular2官方文档学习笔记之Angular模块" data-url="http://www.tc9011.com/2017/03/07/Angular2官方文档学习笔记之Angular模块/">
       </div>
     
   </div>
@@ -669,7 +705,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#官方说明"><span class="nav-number">1.</span> <span class="nav-text">官方说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">2.</span> <span class="nav-text">解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-amp-10"><span class="nav-number">2.1.</span> <span class="nav-text">使用&#10;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css解决办法"><span class="nav-number">2.2.</span> <span class="nav-text">css解决办法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用jQuery的watermark控件"><span class="nav-number">2.3.</span> <span class="nav-text">使用jQuery的watermark控件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Angular模块化"><span class="nav-number">1.</span> <span class="nav-text">Angular模块化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用的根模块"><span class="nav-number">2.</span> <span class="nav-text">应用的根模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引导根模块"><span class="nav-number">3.</span> <span class="nav-text">引导根模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通过即时-JiT-编译器动态引导"><span class="nav-number">3.1.</span> <span class="nav-text">通过即时 (JiT) 编译器动态引导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用预编译器-AoT-进行静态引导"><span class="nav-number">3.2.</span> <span class="nav-text">使用预编译器 (AoT) 进行静态引导</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">4.</span> <span class="nav-text">声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导入"><span class="nav-number">5.</span> <span class="nav-text">导入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特性模块"><span class="nav-number">6.</span> <span class="nav-text">特性模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特性模块-1"><span class="nav-number">6.1.</span> <span class="nav-text">特性模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加-ContactModule"><span class="nav-number">6.2.</span> <span class="nav-text">添加 ContactModule</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过路由器惰性加载模块"><span class="nav-number">7.</span> <span class="nav-text">通过路由器惰性加载模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#应用路由"><span class="nav-number">7.1.</span> <span class="nav-text">应用路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由到特性模块"><span class="nav-number">7.2.</span> <span class="nav-text">路由到特性模块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#共享模块"><span class="nav-number">8.</span> <span class="nav-text">共享模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#核心模块"><span class="nav-number">9.</span> <span class="nav-text">核心模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用forRoot配置核心服务"><span class="nav-number">10.</span> <span class="nav-text">用forRoot配置核心服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#禁止重复导入CoreModule"><span class="nav-number">11.</span> <span class="nav-text">禁止重复导入CoreModule</span></a></li></ol></div>
             
 
           </div>
