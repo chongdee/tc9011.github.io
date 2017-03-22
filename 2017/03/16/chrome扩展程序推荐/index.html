@@ -144,7 +144,7 @@
 <meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20170317148976206235728.png">
 <meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20170317148976048327707.gif">
 <meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20170317148976115799745.gif">
-<meta property="og:updated_time" content="2017-03-17T14:55:37.000Z">
+<meta property="og:updated_time" content="2017-03-18T01:44:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="chrome扩展程序推荐">
 <meta name="twitter:image" content="http://ofx4ie5iq.bkt.clouddn.com/20170316148967659524325.jpg">
@@ -160,7 +160,7 @@
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 'tc9011',
+      userId: 'undefined',
       author: '博主'
     },
     algolia: {
@@ -407,15 +407,17 @@
 
           
             
+            <!--noindex-->
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/03/16/chrome扩展程序推荐/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/16/chrome扩展程序推荐/" itemprop="commentCount"></span>
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/03/16/chrome扩展程序推荐/" itemprop="commentsCount"></span>
                 </a>
               </span>
+              <!--/noindex-->
             
           
 
@@ -459,7 +461,7 @@
 <p><strong>前端开发的时候记得把拦截取消。</strong></p>
 <p>国内下载地址：<a href="http://www.cnplugins.com/office/block/" rel="external nofollow noopener noreferrer" target="_blank">uBlock Origin</a></p>
 <p>官方下载地址：<a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=zh-CN" rel="external nofollow noopener noreferrer" target="_blank">uBlock Origin</a></p>
-<h2 id="Tampermonkey"><a href="#Tampermonkey" class="headerlink" title="Tampermonkey"></a>Tampermonkey</h2><p>俗称“油猴”，号称“Chrome第二应用商店的”，是一款最为流行的用户脚本管理器。它可以加入更多的 Chrome 本身不支持的用户脚本功能。</p>
+<h2 id="Tampermonkey"><a href="#Tampermonkey" class="headerlink" title="Tampermonkey"></a>Tampermonkey</h2><p>俗称“油猴”，号称“Chrome第二应用商店”，是一款最为流行的用户脚本管理器。它可以加入更多的 Chrome 本身不支持的用户脚本功能。</p>
 <p>安装完Tampermonkey，就可以去<a href="https://greasyfork.org/zh-CN" rel="external nofollow noopener noreferrer" target="_blank">Greasy Fork</a>安装各种脚本了，无数强大的脚本都可以通过这个扩展运行，代替应用商店里繁复的apps&amp;extensions，极大地减少了chrome应用、扩展造成的不必要的系统资源占用。<br><strong>不必担心这些脚本会导致浏览器卡顿，它们只在特定页面运行，资源占用极低。</strong></p>
 <p>下面是我安装的一些脚本：</p>
 <p><img src="http://ofx4ie5iq.bkt.clouddn.com/20170316148967460630229.png" alt="20170316148967460630229.png"></p>
@@ -644,22 +646,6 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/03/16/chrome扩展程序推荐/" data-title="chrome扩展程序推荐" data-content="" data-url="http://www.tc9011.com/2017/03/16/chrome扩展程序推荐/">
-  <div class="ds-share-inline">
-    <ul class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -671,8 +657,7 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/16/chrome扩展程序推荐/" data-title="chrome扩展程序推荐" data-url="http://www.tc9011.com/2017/03/16/chrome扩展程序推荐/">
-      </div>
+      <div id="hypercomments_widget"></div>
     
   </div>
 
@@ -930,37 +915,36 @@
 
   
 
-  
-    
-  
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"tc9011"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
-  
-    
-      
-      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-      <script src="/js/src/hook-duoshuo.js?v=5.0.1"></script>
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
+	
+
+		<script type="text/javascript">
+		_hcwp = window._hcwp || [];
+
+		_hcwp.push({widget:"Bloggerstream", widget_id: 88584, selector:".hc-comment-count", label: "{\%COUNT%\}" });
+
+		
+		_hcwp.push({widget:"Stream", widget_id: 88584, xid: "2017/03/16/chrome扩展程序推荐/"});
+		
+
+		(function() {
+		if("HC_LOAD_INIT" in window)return;
+		HC_LOAD_INIT = true;
+		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/88584/"+lang+"/widget.js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hcc, s.nextSibling);
+		})();
+		</script>
+
+	
 
 
 
