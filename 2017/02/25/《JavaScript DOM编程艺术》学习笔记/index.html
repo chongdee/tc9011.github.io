@@ -120,7 +120,7 @@
 <meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20170213248375099247.jpg">
 <meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20170219637762017-02-19_15-08-01.png">
 <meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20170331149096012698856.png">
-<meta property="og:updated_time" content="2017-03-31T13:54:48.000Z">
+<meta property="og:updated_time" content="2017-04-05T07:20:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《JavaScript DOM编程艺术》学习笔记">
 <meta name="twitter:image" content="http://ofx4ie5iq.bkt.clouddn.com/20170213248375099247.jpg">
@@ -478,7 +478,7 @@
 <h4 id="setAttribute"><a href="#setAttribute" class="headerlink" title="setAttribute"></a>setAttribute</h4><p><code>setAttribute</code>方法也只能通过元素节点对象调用。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">object.setAttribute(attribute,value);</div></pre></td></tr></table></figure>
 <p>通过<code>setAttribute</code>对文档做出的修改后，再通过浏览器的view source（查看源码）选项去查看文档的源码时看到的仍将是改变前的值，也就是说<span id="inline-red"><code>setAttribute</code>做出的修改不会反映在文档本身的源码中</span>。这是因为：</p>
-<p id="div-border-left-red">DOM的工作模式是：先加载文档的静态内容，再动态刷新，动态刷新不影响文档的静态内容。这正是DOM的真正威力：对页面进行刷新不需要再浏览器里刷新页面。（tc：也是前端框架路由实现的基础）</p>
+<p id="div-border-left-red">DOM的工作模式是：先加载文档的静态内容，再动态刷新，动态刷新不影响文档的静态内容。这正是DOM的真正威力：对页面进行刷新不需要再浏览器里刷新页面。</p>
 
 <h2 id="案例研究：JavaScript图片库"><a href="#案例研究：JavaScript图片库" class="headerlink" title="案例研究：JavaScript图片库"></a>案例研究：JavaScript图片库</h2><h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><p>DOM是一种适用于多种环境和多种程序设计语言的通用型API。如果想把从本书学到的DOM技巧运用在web浏览器以外的应用环境里，严格遵守”第1级DOM“能够让你避免与兼容性有关的任何问题。</p>
 <h3 id="应用这个JavaScript函数"><a href="#应用这个JavaScript函数" class="headerlink" title="应用这个JavaScript函数"></a>应用这个JavaScript函数</h3><h4 id="事件处理函数"><a href="#事件处理函数" class="headerlink" title="事件处理函数"></a>事件处理函数</h4><p id="div-border-left-green">事件处理函数的工作机制：在给某个元素添加事件处理函数后，一旦事件发生，相应的JavaScript代码就会得到执行。被调用的JavaScript代码可以返回一个值，这个值将被传递给那个事件处理函数。</p>
@@ -812,7 +812,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">40</span>
+                <span class="site-state-item-count">41</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -830,7 +830,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
