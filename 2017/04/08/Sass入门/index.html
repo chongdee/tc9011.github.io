@@ -144,7 +144,7 @@
 <meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20170402149113311193287.png">
 <meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/2017040214911341259540.gif">
 <meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20170411149192386112801.png">
-<meta property="og:updated_time" content="2017-04-11T15:21:00.000Z">
+<meta property="og:updated_time" content="2017-05-31T16:26:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sass入门">
 <meta name="twitter:image" content="http://ofx4ie5iq.bkt.clouddn.com/20170402149106301256809.jpg">
@@ -910,6 +910,7 @@
 <h3 id="error"><a href="#error" class="headerlink" title="@error"></a>@error</h3><p>@error 和 @warn、@debug 功能是如出一辙。</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">mixin</span> error(<span class="variable">$x</span>)&#123;</div><div class="line">  @<span class="keyword">if</span> <span class="variable">$x</span> &lt; 10 &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="variable">$x</span> * <span class="number">10px</span>;</div><div class="line">  &#125; @<span class="keyword">else</span> if <span class="variable">$x</span> == 10 &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="variable">$x</span>;</div><div class="line">  &#125; @<span class="keyword">else</span> &#123;</div><div class="line">    @error <span class="string">"你需要将#&#123;$x&#125;值设置在10以内的数"</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.test</span> &#123;</div><div class="line">  @<span class="keyword">include</span> error(<span class="number">15</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//编译后</span></div><div class="line">你需要将15值设置在10以内的数 on line 7 at column 5</div></pre></td></tr></table></figure>
 <p><img src="http://ofx4ie5iq.bkt.clouddn.com/20170411149192386112801.png" alt="20170411149192386112801.png"></p>
+ <iframe src="http://www.xmind.net/embed/9yff" width="620px" height="540px"></iframe>
       
     </div>
 
