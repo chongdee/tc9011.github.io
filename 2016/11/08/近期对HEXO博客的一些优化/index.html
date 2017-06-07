@@ -139,8 +139,8 @@
 <meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/2016110851463IMG_5069.JPG">
 <meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20161109144742016-11-09_15-13-09.png">
 <meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/2016110930012016-11-09_17-55-18.png">
-<meta property="og:image" content="https://ogddl0byd.qnssl.com/20161109588762016-11-09_17-05-59.png">
-<meta property="og:updated_time" content="2017-01-07T14:03:03.000Z">
+<meta property="og:image" content="http://ofx4ie5iq.bkt.clouddn.com/20161109588762016-11-09_17-05-59.png">
+<meta property="og:updated_time" content="2017-06-07T16:09:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="近期对HEXO博客的一些优化">
 <meta name="twitter:description" content="前几天参加了一场面试，面试时展示我的博客时，发生了一个比较尴尬的事情：博客打开页面空白，此时我内心是崩溃的，明明昨天晚上还好好的。。。
@@ -544,7 +544,7 @@
 <ol>
 <li><p>下载<a rel="external nofollow"><a href="http://static.duoshuo.com/embed.js" rel="external nofollow noopener noreferrer" target="_blank">多说核心脚本embed.js</a></a>，需要更改一处地方代码，</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params">e</span>)</span>&#123;j.theme=e,<span class="string">"none"</span>!=e&amp;&amp;o.injectStylesheet(j.STATIC_URL+<span class="string">"/styles/embed"</span>+(e?<span class="string">"."</span>+e+<span class="string">".css?"</span>+R[e]:<span class="string">"."</span>+short_name)+<span class="string">".css"</span>)&#125;</div></pre></td></tr></table></figure>
-<p>上面代码应该是调用多说样式<code>embed.xxx.css</code>，我们需要修改成我们七牛镜像的多说样式，只需把<code>j.STATIC_URL</code>更改成七牛空间访问域名，例如我修改成<code>&quot;http://og9ocpmwk.bkt.clouddn.com&quot;</code>。更改后另存为<code>dsembed.js</code>（重命名主要防止与七牛镜像中的embed.js冲突）。最后上传到七牛空间里。现在你可以通过地址<code>/dsembed.js</code>访问经过七牛CDN加速后的多说核心脚本。</p>
+<p>上面代码应该是调用多说样式<code>embed.xxx.css</code>，我们需要修改成我们七牛镜像的多说样式，只需把<code>j.STATIC_URL</code>更改成七牛空间访问域名，例如我修改成<code>&quot;http://xxx.com&quot;</code>。更改后另存为<code>dsembed.js</code>（重命名主要防止与七牛镜像中的embed.js冲突）。最后上传到七牛空间里。现在你可以通过地址<code>/dsembed.js</code>访问经过七牛CDN加速后的多说核心脚本。</p>
 </li>
 <li><p>把多说默认引入<code>static.duoshuo.com</code>域名下的<code>embed.js</code>更改成七牛空间更改后的<code>dsembed.js</code>即可。</p>
 <p>这里以多说通用代码为例，</p>
@@ -554,7 +554,7 @@
 <p>这里需要更改成</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ds.src = <span class="string">'这里是你的七牛空间embed.js的地址'</span>;</div></pre></td></tr></table></figure>
 <p>以我的为例，我更改成了</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ds.src = <span class="string">'http://og9ocpmwk.bkt.clouddn.com/dsembed.js'</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ds.src = <span class="string">'http://xxx.com/dsembed.js'</span>;</div></pre></td></tr></table></figure>
 <p>如果你是hexo Next主题的话，需要更改的文件是<code>duoshuo.swig</code>，具体路径在<code>your-hexo-site\themes\next\layout\_scripts\comments</code>目录里。<br>​</p>
 <p>最后值的注意的是，因为我的网站是<code>https://tc9011.github.io</code>，上面的链接若写成http的话，也会加载不了多说评论。所以下面是针对https的一些修改：</p>
 <ul>
@@ -565,12 +565,12 @@
 <ul>
 <li>在内容管理里面选择刚刚生成的域名作为默认外链域名，记得保存。</li>
 </ul>
-<p><img src="https://ogddl0byd.qnssl.com/20161109588762016-11-09_17-05-59.png" alt="20161109588762016-11-09_17-05-59.png"></p>
+<p><img src="http://ofx4ie5iq.bkt.clouddn.com/20161109588762016-11-09_17-05-59.png" alt="20161109588762016-11-09_17-05-59.png"></p>
 <ul>
-<li><p>把内容管理里面的文件先全部删掉，把上面<code>dsembed.js</code>文件重命名一下，主要防止没有覆盖旧文件，比如我命名为<code>dembed.js</code>，再把文件中添加<code>http://og9ocpmwk.bkt.clouddn.com</code>的地方都改成新的外链地址，比如我的<code>https://ogddl0byd.qnssl.com</code>，然后保存，上传七牛。</p>
+<li><p>把内容管理里面的文件先全部删掉，把上面<code>dsembed.js</code>文件重命名一下，主要防止没有覆盖旧文件，比如我命名为<code>dembed.js</code>，再把文件中添加<code>http://xxx.com</code>的地方都改成新的外链地址，比如我的<code>https://xxxx.com</code>，然后保存，上传七牛。</p>
 </li>
 <li><p>把<code>duoshuo.swig</code>中的src替换成新的域名。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ds.src = <span class="string">'https://ogddl0byd.qnssl.com/dembed.js'</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ds.src = <span class="string">'http://XXX.com/dembed.js'</span>;</div></pre></td></tr></table></figure>
 <p>​</p>
 </li>
 </ul>
@@ -843,7 +843,7 @@
   <span class="author" itemprop="copyrightHolder">汤诚</span>
 </div>
 <div>
-<span class="post-count">博客全站共157.7k字</span>
+<span class="post-count">博客全站共157.6k字</span>
 </div>
 
 
