@@ -171,7 +171,7 @@
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/7/25/f8435d678521e47b34f3ef2acaebb25b?imageView2/0/w/1280/h/960">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/7/25/8ec289f569b6171314fa8a62acb1bd43?imageView2/0/w/1280/h/960">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/7/25/532d7c55167bbeedba58a67108e6c2e2?imageView2/0/w/1280/h/960">
-<meta property="og:updated_time" content="2017-08-04T14:35:24.000Z">
+<meta property="og:updated_time" content="2017-08-04T16:04:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Google 的 Material Design">
 <meta name="twitter:image" content="http://ofx4ie5iq.bkt.clouddn.com/20170804150184506473312.png">
@@ -501,19 +501,20 @@
 <h2 id="Material特性"><a href="#Material特性" class="headerlink" title="Material特性"></a>Material特性</h2><p><strong>Material有一套属于自身固定不变的外在特征和内在行为逻辑</strong>。</p>
 <h3 id="物理特性"><a href="#物理特性" class="headerlink" title="物理特性"></a>物理特性</h3><ul>
 <li><p>Material的尺寸<strong>沿x和y轴变化</strong>（单位：dp），并且其有着<strong>固定不变的厚度</strong>（1dp）。</p>
-<p>​                        ▼可行</p>
+  <p class="text-center">▼可行</p>
+
 </li>
 </ul>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/0b149acaaae340a3dd659ade9c29b1f5?imageView2/0/w/1280/h/960" alt=""></p>
-<p>​                                ▼不可行</p>
+<p>​    </p><p class="text-center">▼不可行</p><p></p>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/d8bf421b958655fb7a3edebef1ed7e33?imageView2/0/w/1280/h/960" alt=""></p>
 <ul>
 <li><p>投影的深浅效果跟Material对象之间的位置距离（z轴）相关。</p>
-<p>​                            ▼可行</p>
+<p>​    </p><p class="text-center">▼可行</p><p></p>
 </li>
 </ul>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/56581997e1a165590ba3396371fb77c2?imageView2/0/w/1280/h/960" alt=""></p>
-<p>​                                ▼不可行</p>
+<p>​        </p><p class="text-center">▼不可行</p><p></p>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/5edb31bf1046f8ab0c36b41004879d60?imageView2/0/w/1280/h/960" alt=""></p>
 <ul>
 <li>任何形状和颜色的内容都能在Material上面显示。添加内容不会增加Material的厚度。</li>
@@ -525,63 +526,63 @@
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/fd698239f120b914b47dc93c4e82ee8d?imageView2/0/w/1280/h/960" alt=""></p>
 <ul>
 <li><p>Material是立体的。输入事件不能穿过当前被触发的Material对象。</p>
-<p>​                            ▼可行</p>
+<p>​        </p><p class="text-center">▼可行</p><p></p>
 </li>
 </ul>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/6787e2fd50487d60ad52bf3d208a7be8?imageView2/0/w/1280/h/960" alt=""></p>
-<p>​                                ▼不可行</p>
+<p>​            </p><p class="text-center">▼不可行</p><p></p>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/98c506691851d7e0c67410281b14d706?imageView2/0/w/1280/h/960" alt=""></p>
 <ul>
 <li><p>在空间内，多个Material对象不能同时占据同一个位置。</p>
-<p>​                            ▼可行</p>
+<p>​        </p><p class="text-center">▼可行</p><p></p>
 </li>
 </ul>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/e883a8b76cc8d1dd4ceaae1902f58de3?imageView2/0/w/1280/h/960" alt=""></p>
-<p>​                                ▼不可行</p>
+<p>​            </p><p class="text-center">▼不可行</p><p></p>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/c2cd03e943e2277f6848955377eeb943?imageView2/0/w/1280/h/960" alt=""></p>
 <ul>
 <li><p>一个Material对象不能穿过另一个Material对象。举例，就好比一张纸不能穿过另一张纸一样。</p>
-<p>​                            ▼不可行</p>
+<p>​        </p><p class="text-center">▼不可行</p><p></p>
 </li>
 </ul>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/4b4e732bbed66a857fc744a4578a46af?imageView2/0/w/1280/h/960" alt=""></p>
 <ul>
 <li><p>Material能改变形状</p>
-<p>​                            ▼可行</p>
+<p>​        </p><p class="text-center">▼可行</p><p></p>
 </li>
 </ul>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/dbd51d2cdba8da822591dc049e6ba3fe?imageView2/0/w/1280/h/960" alt=""></p>
 <ul>
 <li><p>Material沿水平方向放大缩小（沿x和y轴）</p>
-<p>​                            ▼可行</p>
+<p>​        </p><p class="text-center">▼可行</p><p></p>
 </li>
 </ul>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/ae092eab52578007bcdebb5854485d74?imageView2/0/w/1280/h/960" alt=""></p>
 <ul>
 <li><p>Material不能弯曲折叠。</p>
-<p>​                            ▼不可行</p>
+<p>​        </p><p class="text-center">▼不可行</p><p></p>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/be331d8adaf86595d9d86d19e3e256c1?imageView2/0/w/1280/h/960" alt=""></p>
 </li>
 <li><p>多个Material对象能够合并成为一个Material对象。</p>
-<p>​                            ▼可行</p>
+<p>​        </p><p class="text-center">▼可行</p><p></p>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/9d8a6f22ff954b681b61cdc47dcf0849?imageView2/0/w/1280/h/960" alt=""></p>
 </li>
 <li><p>被分裂的Material对象能够再次合并。</p>
-<p>​                            ▼可行</p>
+<p>​        </p><p class="text-center">▼可行</p><p></p>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/175632bfe13abca6486eeca10ff2c820?imageView2/0/w/1280/h/960" alt=""></p>
 </li>
 <li><p>Material能够出现或消失在空间里的任何地方。</p>
-<p>​                            ▼可行</p>
+<p>​        </p><p class="text-center">▼可行</p><p></p>
 </li>
 </ul>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/5c9f076ea30bca7408579e3a7da39c6d?imageView2/0/w/1280/h/960" alt=""></p>
 <ul>
 <li><p>Material能沿任何轴向移动。</p>
-<p>​                            ▼可行</p>
+<p>​        </p><p class="text-center">▼可行</p><p></p>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/de6fb1f8bbe06861eb5a8f6b8a3ee25c?imageView2/0/w/1280/h/960" alt=""></p>
 </li>
 <li><p>Z轴上发生的运动变化一般是用户与Material对象交互的反馈结果。</p>
-<p>​                            ▼可行</p>
+<p>​        </p><p class="text-center">▼可行</p><p></p>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/19/d2d0e0c35f31da20591e8b5b0b081d08?imageView2/0/w/1280/h/960" alt=""></p>
 </li>
 </ul>
@@ -639,17 +640,17 @@
 <li><strong>快速、流畅</strong></li>
 </ul>
 <p>一个快速、流畅的动效不会让用户觉得在等待时间：</p>
-<p>​                                ▼可行</p>
+<p>​                </p><p class="text-center">▼可行</p><p></p>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/25/0ff026b1002796de69da80486e169a43?imageView2/0/w/1280/h/960" alt=""></p>
-<p>​                                ▼不可行</p>
+<p>​                </p><p class="text-center">▼不可行</p><p></p>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/25/5f7cefe125bae344150e0bf57a8e2b3c?imageView2/0/w/1280/h/960" alt=""></p>
 <ul>
 <li><strong>清晰、连贯</strong></li>
 </ul>
 <p>过渡应清晰，简明和条理清楚，避免做得过多。</p>
-<p>​                                ▼可行</p>
+<p>​                </p><p class="text-center">▼可行</p><p></p>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/25/b5eb742f7ce0185e29abc825347f4614?imageView2/0/w/1280/h/960" alt=""></p>
-<p>​                                ▼不可行</p>
+<p>​                </p><p class="text-center">▼不可行</p><p></p>
 <p>当过渡的时候每个组件朝着不同的方向或交叉的路径变化，很容易使用户疑惑：</p>
 <p><img src="https://user-gold-cdn.xitu.io/2017/7/25/5f1c1926d1d445983cbe9bbd3ad81b66?imageView2/0/w/1280/h/960" alt=""></p>
 <ul>
